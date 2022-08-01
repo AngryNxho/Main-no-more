@@ -11,4 +11,4 @@ nota_examen = round((4 - npe * 0.7)/0.3,1)
 
 
 print(f"La nota de presentacion a examen es: {npe}",
-f"\nLa nota minima que debe obtener en el examen es: {nota_examen}")aa
+f"\nLa nota minima que debe obtener en el examen es: {nota_examen}")
