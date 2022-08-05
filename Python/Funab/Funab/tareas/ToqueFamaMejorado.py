@@ -3,28 +3,28 @@ import os
 
 
 
-cantidad = 2
+cantidad = 3
 
+intentosTotales = cantidad
+intentosUsuario = 1
 codigo = []
+
+counter = 1
 
 print('Bienvenido'.center(50, '-'))
 
 continuar = 1
 
-i = 1
+
+numero = randint(1,9)
 
 while continuar == 1:
     
-    numero = randint(1,9)
-    for primer_recorrido in range(cantidad):
-        while numero in codigo:
+    while len(codigo) != cantidad:
+
+        if numero in codigo:
             numero = randint(1,9)
-
-        else:
+        
+        elif numero not in codigo:
             codigo.append(numero)
-            
-            for segundo_recorrido in range(cantidad):
-                print(i)
-                i += 1
 
-    

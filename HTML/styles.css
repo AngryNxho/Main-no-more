@@ -13,8 +13,9 @@ input {
 }
 
 body {
-    background-color: black;
+    background:  black;
     font-family: Fira Code;
+    
 }
 
 p {
@@ -23,6 +24,8 @@ p {
 
 .nombre {
     text-align: center;
+   
+    
 }
 
 .followers {
@@ -32,4 +35,5 @@ p {
 button {
     background-color: transparent;
 }
+
 
