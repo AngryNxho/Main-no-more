@@ -1,39 +1,14 @@
-
-
-
-
-p {
-    color: white;
-    text-align: center;
-}
-
-input {
-    text-align: center;
-    
-}
-
 body {
-    background:  black;
-    font-family: Fira Code;
+    background: #0a9396;
+    margin: 0%
+}
+
+.front {
+    background-color: #fefae0;
+    display: inline-block;
+    padding: 20px;
+    border-style: inset;
+    border-width: 20px;
     
 }
-
-p {
-    font-family: Fira Code;
-}
-
-.nombre {
-    text-align: center;
-   
-    
-}
-
-.followers {
-    text-align: center;
-}
-
-button {
-    background-color: transparent;
-}
-
 
