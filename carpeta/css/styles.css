@@ -1,0 +1,55 @@
+body {
+    font-family: 'Alumni Sans Inline One', cursive;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    /* background-color: #c1121f;   */
+    background-image: image(image.jpg);
+    color: white;
+    justify-items: center;
+    text-align: center;
+
+
+  
+}
+
+.img {
+    border: 50%;
+    align-items: center;
+    height: 600px;
+    border:  50px white;
+    border-style: groove;
+    
+}
+
+header {
+    background-color: #ffba08 ;
+    align-items: center;
+    padding: 10px;
+    border: solid white 10px;
+    font-size: 40px;
+}
+
+nav {
+    font-size: 30px;
+}
+
+section {
+    font-size: 20px;
+}
+
+
+
+.logo {
+    border-radius: 50%;
+    height: 300px;
+}
+
+footer {
+    border: groove #ffba08 10px ;
+    background-color: #ffba08;
+}
+
+hr {
+    height: 1px;
+    width: 50%;
+}
