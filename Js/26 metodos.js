@@ -24,10 +24,33 @@ let yo ={
     nombre: "Ignacio",
     apellido: "Manriquez",
     respuesta: function(){
-        console.log(yo.nombre)
+        console.log(yo.nombre, yo.apellido);
     }
 
 };
 
 
+
+let nombre = {
+    name: 'ignacio',
+    answer: function(){
+        console.log(nombre.name.toUpperCase());
+    }
+};
+
+
+nombre.answer();
+
+
+
+
+
+
+
+
+
+
+
+
 yo.respuesta();
+
