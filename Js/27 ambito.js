@@ -29,6 +29,6 @@ function ejemplo(){
 // por ejemplo, el metodo log, si dijieramos que console es una funcion, al imprimir console.log() este metodo habria sido sobreescrito
 
 
-console = function(){
+console = function(){ 
     
 }
