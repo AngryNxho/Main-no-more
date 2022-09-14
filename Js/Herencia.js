@@ -26,7 +26,7 @@
 
 
 
-
+// Todo esto es la Herencia de propiedades
 function Bdd(nombre, nCLiente, edad) {
     this.nombre = nombre;
     this.nCLiente = nCLiente;
@@ -40,17 +40,19 @@ Bdd.prototype.info = function(){
 
 
 function programacion(nombre, nCLiente, edad, lenguaje, universidad) {
+  
     Bdd.call(this, nombre, nCLiente, edad)
     this.lenguaje = lenguaje;
     this.universidad = universidad;
 
 }
 
+programacion.prototype = Bdd.prototype; // ahora el programacion esta herendando el metodo info de Bdd
 
 const son = new Bdd('Ignacio Manriquez', 42342, 21)
 const father = new programacion('Lucas Manriquez', 42432, 12, 'JavaScript', 'U de chile')
 
-console.log(son)
-
-
-console.log(father)
+// console.log(son)
+// console.log(father)
+son.info();
+father.info();
