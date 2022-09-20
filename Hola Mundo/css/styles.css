@@ -1,0 +1,42 @@
+body {
+    display: grid;
+}
+
+ul {
+    list-style: none;
+}
+
+.header{
+    padding: 10px;
+}
+
+.body {
+    
+    border-top: solid 1px;
+    color: black;
+}
+
+.footer {
+    border-top: solid 1px;
+}
+
+.aceptar {
+    background-color: red;
+    border: 0px;
+}
+
+.cancelar{
+    background-color: orange;
+    border: 0px;
+}
+
+
+
+.header,
+.body,
+.footer {
+    padding: 10px;
+    border: solid black;
+    margin-left: 6px;
+    background-color: lightcoral;
+}

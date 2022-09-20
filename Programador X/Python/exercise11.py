@@ -21,5 +21,6 @@ while i <= cantidad:
 
     if len(codigo) == cantidad:
         print(codigo)
+
         
     

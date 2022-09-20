@@ -1,0 +1,17 @@
+ul {
+    background-color: lightyellow;
+    list-style-type: none;
+    border-radius: 4px;
+    border: solid 4px black;
+    padding-left: 0;
+    
+}
+
+
+li {
+    border-bottom: 1px solid black ;
+    padding: 15px;
+    
+    
+
+}

@@ -1,0 +1,109 @@
+blockquote {
+    
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+hr {
+    margin-top: 70px;
+    background-color: black;
+    border: solid 4px black;
+    width: 100%;     
+
+
+}
+
+
+
+
+
+body {
+
+    margin: auto;
+    font-family: 'roboto', sans-serif;
+    font-size: 25px;
+
+    
+}
+
+a {
+    display: block;
+    color: black;
+    padding: 7px;
+    background-color: black;
+}
+ 
+ul {
+    list-style: none;
+}
+
+header {
+    background-color:lightseagreen  ;
+    padding: 25px;
+
+}
+
+
+.navbar a {
+    text-decoration: none;
+    background-color: lightseagreen;
+
+}
+
+figcaption {
+    padding: 25px;
+    color: black;
+    
+}
+
+h2 {
+    margin-right: 50px;
+}
+
+.integrantes ul {
+    margin-right: 80px;
+}
+
+.navbar :hover{
+    color: white;
+}
+
+
+
+.integrantes {
+    background-color: orange;
+    background: solid 10px black;
+
+}
+
+p{
+    font-style: bold;
+    
+}
+
+img {
+    gap: 100px;
+    border: 5px solid;
+    border-radius: 10px;
+    width: 450px;
+}
+
+.fotos{
+    padding: 25px;
+    background-color: lightseagreen;
+    
+}
+
+.informacion, 
+.integrantes,
+header, 
+.fotos{
+    text-align: center;
+    justify-content: center;
+    padding: 25px;
+    
+}
+
+

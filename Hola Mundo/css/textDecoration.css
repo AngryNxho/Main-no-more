@@ -1,0 +1,25 @@
+body {
+    color: red;
+}
+
+
+
+p {
+    text-align: left;
+    text-indent: 15px; /* identar el texto, es español mover la linea donde comienza el parrafo  */ 
+    /* text-transform: uppercase, transformar texto  */
+    /* letter-spacing: 3px; espacio entre letras */
+    line-height: 1.7; /* interlineado, espacio entre las columnas */
+    word-spacing: 10px;
+    text-shadow: 5px 2px 3px blue; /* Sombreado al texto,  primero es el tamaño, segundo el color secundario del sombreado y el tercero 
+    es el difuminado*/
+    
+}
+
+a {
+
+    text-decoration: none;
+    text-transform:capitalize ;
+    letter-spacing: 3px;
+
+}
