@@ -1,0 +1,17 @@
+body {
+    background-color: aqua;
+}
+
+img {
+    float: right;
+   
+}
+
+img:hover{
+    opacity: 0.8;
+}
+
+div p {
+    color: red;
+
+}

@@ -1,10 +1,11 @@
-p {
-    position: fixed 20px;
-    
+body {
+    background-color: aqua;
 }
 
-
-.a{
-    background-color: yellow;
-    padding: 15px;
+p {
+    background-color: red;
+    margin: auto;
+    position: fixed ;
+    border: solid 25px red;
+    padding: 25px;
 }
