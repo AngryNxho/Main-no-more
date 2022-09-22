@@ -1,0 +1,29 @@
+body {
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+
+}
+
+.div {
+    background-color: blue;
+}
+ 
+.div a{
+    background-color: black;
+    padding: 25px;
+    text-decoration: none;
+    
+}
+
+.div li{
+    list-style: none;
+    padding: 25px;
+    display: inline-block;
+
+}
+
+.div a:hover{
+    color: orange;
+    background-color: rgba(0, 0, 0, 0.3);
+}
