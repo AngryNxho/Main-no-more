@@ -5,21 +5,38 @@ body {
 
 .btn{
     padding: 12px 16px;
-    margin-bottom: 30px;
+    /* margin-bottom: 0px; */
+    border: none;
+    background-color: green;
+    border-radius: 10px;
 }
+
+.btn:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
 .contenedor {
     text-align: center;
     align-items: center;
 
 }
 
+.contenido {
+    display: none;
+}
 
 .contenido a{
+    display: block;
     padding: 20px;
     text-decoration: none;
-    background-color: blue;   
+    background-color: blue;
+    margin: 10px;
     color: whitesmoke;
+    border-radius: 15px;    
+}
 
 
-    
+.contenido a:hover{
+    background-color: rgba(0,0,0,0.3);
+
 }

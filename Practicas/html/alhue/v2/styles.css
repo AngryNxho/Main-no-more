@@ -1,0 +1,129 @@
+
+body {
+    background-color: #2a9d8f;
+    font-family: 'Montserrat', sans-serif;
+    color: #f4a261;
+    font-style: bold;
+    margin: 0;
+    padding: 0;
+ 
+}
+
+.titulo {
+    font-size: 45px;
+    background-color: #f4a261;
+    color: #2a9d8f;
+    width: 75%;
+    text-align: center;
+    margin-left: 12%;
+    margin-top: 0;
+}
+
+.navbar {
+    text-align: center;
+}
+
+.btn {
+    padding: 24px 40px;
+    background-color: #f4a261;
+    border: solid 1px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.contenido a{
+    display: block;
+    text-decoration: none;
+    font-size: 50px;
+    padding: 15px;
+    color: #2a9d8f;
+    background-color: #f4a261;
+    margin-top: 14px;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 25%;
+
+}
+
+
+
+
+.contenido a:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+.contenido {
+    display: none;
+}
+
+
+.navbar:hover .contenido{
+    justify-content: center;
+    display: block;
+
+}
+
+
+hr {
+    margin-top: 100px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+
+.informacion {
+    font-size: 50px;
+    text-align: center;
+    background-color: #f4a261;
+    border-radius: 5px;
+    color: #2a9d8f;
+    width: 75%;
+    margin-left: 12%;
+}
+
+.integrantes {
+
+    font-size: 50px;
+    text-align: center;
+    background-color: #f4a261;
+    border-radius: 5px;
+    color: #2a9d8f;
+    width: 75%;
+    min-height: 20%;
+    margin-left: 12%;
+
+}
+
+ul li{
+    list-style: none;
+    
+}
+
+.fotos {
+    border-radius: 5px;
+    font-size: 50px;
+    text-align: center;
+    color: #2a9d8f;
+    width: 75%;
+    margin-left: 12%;
+}
+
+.fotos img{
+    border-radius: 50px;
+    border: solid 5px rgba(0,0,0,0.5);
+    size: 100px;
+}
+
+.foto1,
+.foto2,
+.foto3 {
+    background-color: #f4a261;
+    border-radius: 5px;
+    
+}
