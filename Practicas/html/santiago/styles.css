@@ -1,52 +1,25 @@
 body {
-    background-color: aqua;
-    margin: 0;
-    padding: 0;
-    font-size: 25px;
+    background-color: whitesmoke;
 }
 
 
-.content {
-    margin-top: 25px;
-  
+.btn{
+    padding: 12px 16px;
+    margin-bottom: 30px;
 }
-
-.content li{
-    list-style: none;
-    display: inline-block;
-    margin: 20px;
-
-    
-}
-
-.content a{
-    text-decoration: none;
-    background-color: red;
-    padding: 20px;
-    color: white;
-    
-    
-}
-
-.content a:hover{
-    
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.navbar {
-    align-items: center;
+.contenedor {
     text-align: center;
+    align-items: center;
+
+}
+
+
+.contenido a{
+    padding: 20px;
+    text-decoration: none;
+    background-color: blue;   
+    color: whitesmoke;
+
 
     
-}
-
-.btn {
-    padding: 20px;
-    border: none;
-    border-radius: 5px;
-}
-
-.btn:hover{
-    background-color: rgba(0, 0, 0, 0.3);
-
 }
