@@ -1,0 +1,17 @@
+body {
+    background: whitesmoke;
+
+
+}
+
+
+.grid {
+    display: grid;
+    /* inline-grid */
+    /* Grid */
+}
+
+
+.element {
+    background: red;
+}

@@ -1,0 +1,14 @@
+body {
+    background-color: whitesmoke;
+}
+
+
+.fondo {
+    background-color: hsl(120, 60%, 70%);
+    
+    /* hsl(hue, saturation, lightness)  */
+    /* hsla(hue, saturation, lightness, alpha)  */
+    /* rgba(0,0,0,0.3); */
+    opacity: 80%; 
+    /*La opacidad afecta al elemento completo, no solamente al fondo  */
+}
