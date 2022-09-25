@@ -1,0 +1,27 @@
+body {
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.btn{
+    padding: 12px 20px;
+}
+
+.contenedor{
+    position: relative;
+    width: 43px;
+}
+
+
+
+.contenido {
+    display: none;
+    position: absolute;
+}
+
+.contenedor:hover .contenido{
+    display: block;
+}
