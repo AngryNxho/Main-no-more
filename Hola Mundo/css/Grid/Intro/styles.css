@@ -9,6 +9,14 @@ body {
     display: grid;
     /* inline-grid */
     /* Grid */
+    /* grid-template-rows: 50px 100px; */
+    /* Filas */
+
+    /* grid-template-columns: 90px 50px 120px 50px; */
+    /* Ancho */
+
+    /* grid-template-columns: 1fr 2fr 3fr; */
+
 }
 
 
