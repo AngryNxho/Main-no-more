@@ -1,27 +1,54 @@
 body {
-    background-color: aqua;
+    background: aqua;
     margin: 0;
     padding: 0;
-    
 }
 
+/* Navbar */
+.navbar {
+    text-align: center;
+    background-color: black;
+    padding: 25px;
 
-.btn{
-    padding: 12px 20px;
 }
 
-.contenedor{
-    position: relative;
-    width: 43px;
+.navbar a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: red;
+    border-radius: 5px;
+
 }
 
+/* btn */
 
+.bt {
+    background-color: red;
+    margin-bottom: 15px;
+    padding: 14px;
+    border-radius: 5px;
+}
 
-.contenido {
+.bt:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Content */
+
+.content {
     display: none;
-    position: absolute;
 }
 
-.contenedor:hover .contenido{
+button {
+    padding: 20px;
+}
+
+
+/* display content */
+body .navbar button:hover {
+    background-color: yellow;
+}
+
+body .navbar button:hover .content{
     display: block;
 }
