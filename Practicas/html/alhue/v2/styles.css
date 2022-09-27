@@ -20,8 +20,7 @@ body {
 }
 
 
-
-.contenedor .btn{
+.contenedor {
     text-align: center;
 }
 
@@ -39,7 +38,7 @@ body {
     font-size: 24px;
     width: 26%;
     margin-left: 1.5%;
-    display: block;
+    display: none;
     
 }
 
@@ -115,4 +114,12 @@ img {
 
 .fotos {
     color: white;
+}
+
+.contenedor:hover .contenido{
+    display: block;
+}
+
+.contenedor:hover .btn{
+    width: 10px;
 }
