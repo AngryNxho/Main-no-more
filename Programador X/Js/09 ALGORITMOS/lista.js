@@ -7,7 +7,7 @@ class Lista {
 
     push(item) {
         this[this.length] = item;
-        this.length++;
+        this.length++;  
         return this.length;
     }
 
@@ -33,3 +33,10 @@ console.log(lista[1], lista.length);
 lista.pop();
 console.log(lista.length)
 
+
+
+class List {
+
+    length
+
+}
