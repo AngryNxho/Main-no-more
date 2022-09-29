@@ -7,7 +7,7 @@ let indefinido
 let bigInt = BigInt(32423432974982379487298);
 let symbol = Symbol('Simbolo');
 
-// TIPOS DE DAOTS ESTRUCTURALES
+// TIPOS DE DATOS ESTRUCTURALES
 // objetos 
 let objeto = {0: 'Xavier'}; //Object -> objeto[0] Una forma de identificar a los objetos es con la palabra new, esta crea un nuevo objeto
 let lista = ['Xavier']; //Array -> tambien es un objeto lista[0] new array crea una nueva lista

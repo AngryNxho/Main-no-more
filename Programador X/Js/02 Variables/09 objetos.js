@@ -15,7 +15,6 @@ let objeto  = {
         objeto2 : 'hola'
     }
 
- 
 
 };
 

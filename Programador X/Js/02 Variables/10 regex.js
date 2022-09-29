@@ -17,6 +17,7 @@ let texto7 = 'no me gusta Diplo';
 //^ Si queremos buscar esta palabra al inicio del texto
 let regex = /^Me/i;
 
+// el metodo test es para corroborar si la letra que especificamos esta en en texto
 console.log(regex.test(texto1));
 console.log(regex.test(texto2));
 console.log(regex.test(texto3));

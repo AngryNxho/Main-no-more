@@ -6,29 +6,30 @@ console.log(abecedario.length);
 
 // Ultima letra
 
-console.log(abecedario[abecedario.length -1]);
+// console.log(abecedario[abecedario.length - 1]);
 
 // Orden alfabetico
-console.log(abecedario.sort());
+
+// console.log(abecedario.sort());
 
 // Este valor dara verdadero o falso si la lista incluye la letra b
-console.log(abecedario.includes('b'));
+
+// console.log(abecedario.includes('a'));
+
 // Anhadir un elemento al final de la list
-abecedario.push('x');
 
-console.log(abecedario);
-
+// abecedario.push('x');
+// console.log(abecedario);
 // El pop elimina el ultimo elementos de la lista
-abecedario.pop();
-console.log(abecedario);
+
+// abecedario.pop();
+// console.log(abecedario);
 
 // Agregar o remover un elemento a la lista
-abecedario.unshift('i');
-console.log(abecedario);
 
+// abecedario.shift();
+// console.log(abecedario);
 
-abecedario.shift('i');
-console.log(abecedario);
 
 // Eliminar una serie de elementos de la lista
 
