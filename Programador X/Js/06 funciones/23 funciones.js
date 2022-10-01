@@ -18,12 +18,12 @@
 // console.log(sumar(23,3));
 
 
+
 function sumar(){
     let suma = 0;
-
     for (let numero of arguments){
         suma += numero;
-    }return suma;
+    } return suma;
 }
 
-console.log(sumar(1,2,3,2,1,243,));
+console.log(sumar(23,2,1,1));
