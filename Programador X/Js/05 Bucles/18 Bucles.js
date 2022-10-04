@@ -13,6 +13,6 @@ let canciones = ['Waiting for love', 'Yellow', 'Heavens', 'Summit','Only love ca
 // Primero se declara la variable, luego ponemos la condicion y finalmente lo que pasara si se cumple la condicion
 
 
-for (let a = 0; a < canciones.length; a ++){
+for (let a = 0; a < canciones.length; a++){
     console.log(canciones[a])
 }
