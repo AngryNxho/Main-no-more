@@ -12,7 +12,7 @@ let raiz = new Node(2, [
         new Node(10),
         new Node(6, [
             new Node(5),
-            new Node(111)
+            new Node(11)
         ])
     ]),
     new Node(5, [
