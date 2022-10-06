@@ -6,8 +6,8 @@ class Node{
 }
 
 
-let raiz = new Node(2, [
-    new Node(7,[
+let raiz =  new Node(2,[
+    new Node(7, [
         new Node(2),
         new Node(10),
         new Node(6, [
@@ -19,8 +19,11 @@ let raiz = new Node(2, [
         new Node(9, [
             new Node(4)
         ])
-    ])
+    ]),
 ])
+
 
 console.log(JSON.stringify(raiz, null, 2));
 
+
+// Pendiente hacer la funcion preorder, postorden y bst
