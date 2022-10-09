@@ -1,3 +1,8 @@
-let lista = ["a", "b", "c"]
 
-console.log(lista.forEach(() => console.log(lista[0])));
+const sentence = 'The quick brown fox jumps over the lazy dog.';
+ 
+const index = 3;
+ 
+ 
+ 
+console.log(`The character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(index)}`);
