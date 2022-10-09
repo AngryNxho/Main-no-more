@@ -1,11 +1,26 @@
-function twoSums(numeros, target = 0){
-    let lista = [];
+function twoSums(nums, target = 0){
+    let lista = [nums];
+    let suma = 0;
+    // for (let numero of nums){
+        // suma += numero;
+    // }
 
-    for (let numero of arguments){
-        lista.push(numero)
+    let i = 0;
+    let x = 0;
+
+    console.log(target);
+    while (lista[i] + lista[x] != target){
+        if (lista[i] + lista[x] != target){
+            x += 1;
+        } else if (lista)
+
     }
-    return lista[0];
+        
+    
+    
+    return `Lista: ${comprobar}`
+
+
 }
 
-
-console.log(twoSums([1,2,3,4,], 3));
+console.log(twoSums([1,2,3], 4));
