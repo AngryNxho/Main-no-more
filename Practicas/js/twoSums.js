@@ -1,26 +1,39 @@
 function twoSums(nums, target = 0){
     let lista = [nums];
-    let suma = 0;
-    // for (let numero of nums){
-        // suma += numero;
-    // }
-
+    let indices = [];
+    
     let i = 0;
-    let x = 0;
+    let x = 1;
+    let y = 1
+    let yy = 2;
+    // let resultado = lista[0][i] + lista[0][x];
 
-    console.log(target);
-    while (lista[i] + lista[x] != target){
-        if (lista[i] + lista[x] != target){
-            x += 1;
-        } else if (lista)
-
-    }
+    for (let comprobar of nums){
+        if (lista[0][i] + lista[0][x] !== target){
+            // console.log('primer if');
+            x +=1;
+            
+            if (lista[0][y] + lista[0][yy] === target){
+                // console.log('segundo if')
+                indices.push(y, yy);
+                break
+            }
+        // [3, 2, 4] = 6
+        // 0   1  2
+        } 
+        else if (lista[0][i] + lista[0][x] === target){
+        // console.log('segundo if');
+        indices.push(i, x);
+        break
+        } 
         
-    
-    
-    return `Lista: ${comprobar}`
+    }    
 
-
+    // console.log(lista[0][0], lista[0][1]);
+    
+    return indices;
 }
 
-console.log(twoSums([1,2,3], 4));
+console.log(twoSums([2, 7, 11, 15], 9)); 
+console.log(twoSums([3, 2,4], 6)); 
+console.log(twoSums([3,3], 6)); 0, 1
