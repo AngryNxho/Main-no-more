@@ -8,11 +8,7 @@ INSERT INTO "paises" ("id", "iso", "nombre") VALUES
 SELECT * FROM paises WHERE nombre = 'Algeria';
 
 -- Update (Actualizar)
-UPDATE "paises" 
-    SET 
-        nombre = 'ALGE', 
-        iso = 'AA' 
-    WHERE nombre = 'Algeria';
+UPDATE "paises" SET nombre = 'ALGE', iso = 'AA' WHERE nombre = 'Algeria';
 
 -- Delete (Borrar)
 DELETE FROM paises WHERE nombre = 'Algeria';

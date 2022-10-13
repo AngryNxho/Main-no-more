@@ -20,6 +20,7 @@ let raiz = new Node(1,[
 
 
 
+
 // console.log(JSON.stringify(raiz, null, 2));
 
 
@@ -31,10 +32,7 @@ function preOrden(root){
     }
 
 }
-
 // preOrden(raiz);
-
-
 
 function postOrden(root){
     if (!root) return null;
@@ -43,23 +41,19 @@ function postOrden(root){
     }
     console.log(root.value);
 
-
 }
 
+
 // postOrden(raiz);
+
 
 function bfs(root){
     if (!root) return null;
     let queue = [root];
-
     while (queue.length) {
         let nodo = queue.shift();
-        console.log(nodo.value);
         for (let child of nodo.children){
             queue.push(child);
         }
     }
-    
 }
-
-bfs(raiz);
