@@ -36,4 +36,5 @@ function twoSums(nums, target = 0){
 
 console.log(twoSums([2, 7, 11, 15], 9)); 
 console.log(twoSums([3, 2,4], 6)); 
-console.log(twoSums([3,3], 6)); 0, 1
+console.log(twoSums([3,3], 6)); 
+console.log(twoSums([1,2,3,4,5], 9)); 
