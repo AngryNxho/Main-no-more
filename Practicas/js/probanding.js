@@ -1,3 +1,0 @@
-// const days = ((new Date()) => {
-
-})
