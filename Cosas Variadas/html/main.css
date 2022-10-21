@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: linear-gradient(#EB5E28, #ba181b) no-repeat left top scroll;
+    background: linear-gradient(to bottom right, #EB5E28, #ba181b) no-repeat;
     min-height: 100%;
     
 }
