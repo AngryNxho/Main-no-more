@@ -1,3 +1,9 @@
+html {
+    height: 100%;
+}
+
 body {
-    background-color: lightcoral;
+    background: linear-gradient(#EB5E28, #ba181b) no-repeat left top scroll;
+    min-height: 100%;
+    
 }
