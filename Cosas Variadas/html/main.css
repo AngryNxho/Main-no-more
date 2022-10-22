@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom right, #EB5E28, #ba181b) no-repeat;
+    background: linear-gradient(to top, #000000, #fca311, #000000) no-repeat;
     min-height: 100%;
     
 }
