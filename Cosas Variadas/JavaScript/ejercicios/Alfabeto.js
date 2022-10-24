@@ -10,6 +10,6 @@ function ascii(valor) {
   }
 }
 
-console.log(ascii("y"));
+console.log(ascii('y'));
 
-const x = 24;
+const calcAge = birthYear => 2034 - 20;
