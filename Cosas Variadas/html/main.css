@@ -1,9 +1,36 @@
 html {
     height: 100%;
+    font-family: roboto;
+
 }
 
 body {
-    background: linear-gradient(to top, #000000, #fca311, #000000) no-repeat;
+    background: linear-gradient(to bottom left,#001524, #15616d) no-repeat;
     min-height: 100%;
+    margin: 0;
+    padding: 0;
     
 }
+
+.navbar {
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 25px;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar a{
+    text-decoration: none;
+    padding: 20px;
+    color: #001524;
+    font-size: 24px;
+}
+
+.navbar a:hover{
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 5px;
+    color: #15616d;
+}
+
+
