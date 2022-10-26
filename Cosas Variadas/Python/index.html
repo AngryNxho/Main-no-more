@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenido a mi version de Toque y Fama en Javascript</h1>
+    </header>
+
+    <main>
+      <div class="reglas">
+        <label>A continuacion veras las reglas del Juego</label>
+        <li>Debes escribir el largo que quieres que tenga el codigo</li>
+        <li>
+          Ese sera tu maximo numero de intentos que tendras para adivinarlo
+        </li>
+        <li>
+          Los toques ocurren cuando ingresas un numero que se encuentre dentro
+          del codigo secreto
+        </li>
+        <li>
+          Las famas ocurren cuando ademas pones un numero en la posicion que
+          esta en el codigo secreto
+        </li>
+      </div>
+
+      <div class="contenedor">
+        <label>Ingresa el largo del numero</label>
+        <br>
+        <br>
+        <input type="number" class="guess">
+        <br>
+        <button class="check">Ingresar</button>
+      </div>
+
+
+      <div class="right">
+        <p>Vidas: <span class="attemps">0</span></p>
+        <p>Toques: <span class="toques">0</span></p>
+        <p>Famas: <span class="famas">0</span></p>
+        <button class="again">Reiniciar</button>
+      </div>
+
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
