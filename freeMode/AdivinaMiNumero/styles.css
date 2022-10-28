@@ -6,6 +6,8 @@
 }
 
 
+
+
 .navbar{
     width: 100%;
     text-align: center;
@@ -15,16 +17,7 @@
     font-size: 40px;
 }
 
-.show-modal{
-    padding: 20px;
-    background-color: black;
-    color: red;
-    font-size: 25px;
-}
 
-.modal-hidden{
-    display: none;
-}
 body{
     background: url(https://c4.wallpaperflare.com/wallpaper/1015/933/121/abstract-grey-gray-minimalist-wallpaper-preview.jpg);
 }
@@ -95,4 +88,25 @@ button{
     width: 100%;
     font-size: 70px;
     border: solid 4px black;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.show-modal{
+    padding: 20px 12px;
+    margin-right: 20px;
+    margin-left: 350px;
+    justify-content: space-evenly;
+}
+
+.modal{
+    color: white;
+    text-align: center;
+}
+
+.modal button{
+    text-align: right;
 }
