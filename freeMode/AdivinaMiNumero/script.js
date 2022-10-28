@@ -9,6 +9,12 @@ let userGuess = document.querySelector('.input').value;
 let score = 10;
 let highscore = 0;
 
+
+
+
+
+
+
 const displayMessage = function(message) {
   document.querySelector('.start').textContent = message;
 };

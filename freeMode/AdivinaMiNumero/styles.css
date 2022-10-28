@@ -15,28 +15,16 @@
     font-size: 40px;
 }
 
-.navbar ul li{
-    list-style: none;
-    top: 200p
-}
-
-.navbar ul li a{
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-}
-
-.navbar a:hover{
-    color: red;
+.show-modal{
+    padding: 20px;
     background-color: black;
-    padding: 10px;
-    border-radius: 5px;
+    color: red;
+    font-size: 25px;
 }
-/* body{ */
-    /* background-image: url(./b5d55223b5fb572948d1e1e971ef4478.jpg); */
-    /* background-size: 500px; */
-/* } */
 
+.modal-hidden{
+    display: none;
+}
 body{
     background: url(https://c4.wallpaperflare.com/wallpaper/1015/933/121/abstract-grey-gray-minimalist-wallpaper-preview.jpg);
 }
