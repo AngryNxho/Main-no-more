@@ -6,27 +6,29 @@ const btnCloseModal = document.querySelector('.close-modal');
 
 // btns
 let numberLength = (document.querySelector('.length'));
-let randomNumber = Math.trunc(Math.random() * 9) + 1;
 const startGame = document.querySelector('.start');
 const digits = document.querySelector('.digits');
 let checkBtn = document.querySelector('.check');
+let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
+let userGuess = document.querySelector('.userCode').value;
+console.log(userGuess);
+console.log(numberLength);
 
 const changeDigits = function(){
-    document.querySelector('.digits').textContent = numberLength.value;
+    largo = document.querySelector('.digits').textContent = numberLength.value;
 }
 const numberLoop = function(length) {
-  while (length.value > lista.length) {
+  while (length > lista.length) {
     if (lista.includes(randomNumber)) {
       randomNumber = Math.trunc(Math.random() * 9) + 1;
-    } else if(!lista.includes){
+    } else {
       lista.push(randomNumber);
     }
   }
   
   return lista;
 };
-
 
 const openModal = function () {
   modal.classList.remove('hidden');
@@ -44,3 +46,23 @@ nameSendButton.addEventListener('click', function () {
 btnOpenModal.addEventListener('click', openModal);
 btnCloseModal.addEventListener('click', closeModal);
 startGame.addEventListener('click', changeDigits);
+checkBtn.addEventListener('click', function(length) {
+  while (length.value > lista.length) {
+    if (lista.includes(randomNumber)) {
+      randomNumber = Math.trunc(Math.random() * 9) + 1;
+    } else if(!lista.includes){
+      lista.push(randomNumber);
+    }
+  }
+  console.log(lista);
+  document.querySelector('.code').textContent = numberLoop(largo);
+  return lista;
+  
+});
+
+checkBtn.addEventListener('click', function(){
+  if (userGuess === '1'){
+    document.querySelector('.code').textContent = 'Winner'
+  }
+})
+
