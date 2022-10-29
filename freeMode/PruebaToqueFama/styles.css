@@ -15,6 +15,10 @@ header{
     text-align: center;
 }
 
+button:hover{
+    background-color: #d62828;
+    color: #fcbf49;
+}
 
 body{
     background: linear-gradient(to top left,#d62828, #e63946);
@@ -47,10 +51,7 @@ body{
     cursor: pointer;
 }
 
-.sendName:hover{
-    background-color: #d62828;
-    color: #fcbf49;
-}
+
 
 .sign{
     text-align: center;
@@ -71,11 +72,6 @@ body{
 }
 
 
-.show-modal:hover{
-    background-color: #d62828;
-    color: #fcbf49;
-
-}
 
 .modal{
     text-align: center;
@@ -98,10 +94,6 @@ body{
     cursor: pointer;
 }
 
-.close-modal:hover{
-    background-color: #d62828;
-    color: #fcbf49;
-}
 
 .game{
     text-align: center;
@@ -134,12 +126,19 @@ body{
     color: #d62828;
 }
 
-.start:hover{
-    background-color: #d62828;
-    color: #fcbf49;
-}
+
 
 .stats{
     text-align: center;
     font-size: 35px;
+}
+
+.check{
+    font-size: 40px;
+    border-radius: 20px;
+    width: 25%;
+    background-color: #fcbf49;
+    color: #d62828;
+    cursor: pointer;
+
 }

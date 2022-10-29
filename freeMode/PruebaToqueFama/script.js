@@ -1,27 +1,29 @@
+// Rules functionality
 const modal = document.querySelector('.modal');
 const nameSendButton = document.querySelector('.sendName');
 const btnOpenModal = document.querySelector('.show-modal');
 const btnCloseModal = document.querySelector('.close-modal');
-const numberLength = document.querySelector('.length').value;
-console.log(numberLength);
+
+// btns
+let numberLength = (document.querySelector('.length'));
 let randomNumber = Math.trunc(Math.random() * 9) + 1;
 const startGame = document.querySelector('.start');
 const digits = document.querySelector('.digits');
-
+let checkBtn = document.querySelector('.check');
 let lista = [];
 
 const changeDigits = function(){
-    document.querySelector('.digits').textContent = document.querySelector('.length').value;
+    document.querySelector('.digits').textContent = numberLength.value;
 }
-const numberLoop = function (length) {
-  while (length > lista.length) {
+const numberLoop = function(length) {
+  while (length.value > lista.length) {
     if (lista.includes(randomNumber)) {
       randomNumber = Math.trunc(Math.random() * 9) + 1;
-    } else {
+    } else if(!lista.includes){
       lista.push(randomNumber);
     }
   }
-
+  
   return lista;
 };
 
@@ -39,8 +41,6 @@ nameSendButton.addEventListener('click', function () {
   document.querySelector('.sign').textContent = `Bienvenid(o/a) ${username}`;
 });
 
-btnOpenModal.addEventListener('click    ', openModal);
+btnOpenModal.addEventListener('click', openModal);
 btnCloseModal.addEventListener('click', closeModal);
-
-
 startGame.addEventListener('click', changeDigits);
