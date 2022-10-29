@@ -12,7 +12,10 @@ let checkBtn = document.querySelector('.check');
 let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
 
-console.log(numberLength);
+// Info
+const famas = document.querySelector('.famas').textContent = 0;
+const toques = document.querySelector('.toques').textContent = 0;
+
 
 let changeDigits = function(){
     largo = document.querySelector('.digits').textContent = numberLength.value;
@@ -61,9 +64,16 @@ startGame.addEventListener('click', function(length) {
 
   checkBtn.addEventListener('click', function(){
     let userGuess = (document.querySelector('.userCode').value);
-    if (userGuess == lista){
-      document.querySelector('.code').textContent = 666;
+  
+    for (let i = 0; i < lista.length; i++){
+      if (lista[i] == userGuess[i]){
+        document.querySelector('.famas').textContent++;
+
+      }
+
+      console.log(lista[i]);
     }
-    console.log(userGuess);
+
   });
 })
+
