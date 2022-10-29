@@ -11,10 +11,7 @@ const digits = document.querySelector('.digits');
 let checkBtn = document.querySelector('.check');
 let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
-let userGuess = Number(document.querySelector('.userCode').value);
-console.log(typeof(userGuess));
 
-console.log(userGuess);
 console.log(numberLength);
 
 let changeDigits = function(){
@@ -30,8 +27,8 @@ const numberLoop = function(length) {
       lista.push(randomNumber);
     }
   }
-  let code = lista
-  return code;
+  let secretCode = lista
+  return lista;
 };
 
 const openModal = function () {
@@ -63,12 +60,10 @@ startGame.addEventListener('click', function(length) {
   console.log(lista);
 
   checkBtn.addEventListener('click', function(){
-      if (userGuess === code){
-        document.querySelector('.code').textContent = 2;
-        
-      };
-  
+    let userGuess = (document.querySelector('.userCode').value);
+    if (userGuess == lista){
+      document.querySelector('.code').textContent = 666;
+    }
+    console.log(userGuess);
   });
-
-
-});
+})
