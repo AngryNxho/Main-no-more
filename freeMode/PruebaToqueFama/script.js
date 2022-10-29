@@ -11,13 +11,17 @@ const digits = document.querySelector('.digits');
 let checkBtn = document.querySelector('.check');
 let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
-let userGuess = document.querySelector('.userCode').value;
+let userGuess = Number(document.querySelector('.userCode').value);
+console.log(typeof(userGuess));
+
 console.log(userGuess);
 console.log(numberLength);
 
-const changeDigits = function(){
+let changeDigits = function(){
     largo = document.querySelector('.digits').textContent = numberLength.value;
 }
+
+
 const numberLoop = function(length) {
   while (length > lista.length) {
     if (lista.includes(randomNumber)) {
@@ -26,8 +30,8 @@ const numberLoop = function(length) {
       lista.push(randomNumber);
     }
   }
-  
-  return lista;
+  let code = lista
+  return code;
 };
 
 const openModal = function () {
@@ -45,8 +49,8 @@ nameSendButton.addEventListener('click', function () {
 
 btnOpenModal.addEventListener('click', openModal);
 btnCloseModal.addEventListener('click', closeModal);
-startGame.addEventListener('click', changeDigits);
-checkBtn.addEventListener('click', function(length) {
+startGame.addEventListener('click', changeDigits, );
+startGame.addEventListener('click', function(length) {
   while (length.value > lista.length) {
     if (lista.includes(randomNumber)) {
       randomNumber = Math.trunc(Math.random() * 9) + 1;
@@ -56,13 +60,15 @@ checkBtn.addEventListener('click', function(length) {
   }
   console.log(lista);
   document.querySelector('.code').textContent = numberLoop(largo);
-  return lista;
+  console.log(lista);
+
+  checkBtn.addEventListener('click', function(){
+      if (userGuess === code){
+        document.querySelector('.code').textContent = 2;
+        
+      };
   
+  });
+
+
 });
-
-checkBtn.addEventListener('click', function(){
-  if (userGuess === '1'){
-    document.querySelector('.code').textContent = 'Winner'
-  }
-})
-
