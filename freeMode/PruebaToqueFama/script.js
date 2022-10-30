@@ -19,7 +19,7 @@ const toques = document.querySelector('.toques').textContent = 0;
 
 let changeDigits = function(){
     largo = document.querySelector('.digits').textContent = numberLength.value;
-}
+} 
 
 
 const numberLoop = function(length) {
@@ -30,7 +30,7 @@ const numberLoop = function(length) {
       lista.push(randomNumber);
     }
   }
-  let secretCode = lista
+  secretCode = lista
   return lista;
 };
 
@@ -65,14 +65,17 @@ startGame.addEventListener('click', function(length) {
   checkBtn.addEventListener('click', function(){
     let userGuess = (document.querySelector('.userCode').value);
   
-    for (let i = 0; i < lista.length; i++){
-      if (lista[i] == userGuess[i]){
+    for (let i in lista){
+      if (userGuess[i] == lista[i]){
         document.querySelector('.famas').textContent++;
+      } 
+      if (lista.includes(Number(userGuess[i]))){
+        document.querySelector('.toques').textContent++;
 
       }
-
-      console.log(lista[i]);
     }
+
+
 
   });
 })
