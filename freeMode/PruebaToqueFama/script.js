@@ -13,8 +13,6 @@ let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
 
 // Info
-const famas = document.querySelector('.famas').textContent = 0;
-const toques = document.querySelector('.toques').textContent = 0;
 
 
 let changeDigits = function(){
@@ -67,13 +65,15 @@ startGame.addEventListener('click', function(length) {
   
     for (let i in lista){
       if (userGuess[i] == lista[i]){
+        if (document.querySelector('.famas').textContent <= lista.length){
+          document.querySelector('.winner').textContent = 'GANADOR';
+        }
         document.querySelector('.famas').textContent++;
       } 
-      else if (lista.includes(Number(userGuess[i]))){
+      if (lista.includes(Number(userGuess[i]))){
         document.querySelector('.toques').textContent++;
-
       }
-    }
+    };
 
 
 
