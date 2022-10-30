@@ -69,7 +69,7 @@ startGame.addEventListener('click', function(length) {
       if (userGuess[i] == lista[i]){
         document.querySelector('.famas').textContent++;
       } 
-      if (lista.includes(Number(userGuess[i]))){
+      else if (lista.includes(Number(userGuess[i]))){
         document.querySelector('.toques').textContent++;
 
       }
