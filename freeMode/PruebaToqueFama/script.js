@@ -13,8 +13,6 @@ let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
 
 // Info
-
-
 let changeDigits = function(){
     largo = document.querySelector('.digits').textContent = numberLength.value;
 } 
@@ -56,24 +54,27 @@ startGame.addEventListener('click', function(length) {
       lista.push(randomNumber);
     }
   }
-  console.log(lista);
   document.querySelector('.code').textContent = numberLoop(largo);
-  console.log(lista);
 
   checkBtn.addEventListener('click', function(){
     let userGuess = (document.querySelector('.userCode').value);
   
     for (let i in lista){
-      famas = document.querySelector('.famas').textContent; 
+      famas = document.querySelector('.famas'); 
+      toques = document.querySelector('.toques'); 
       if (userGuess[i] == lista[i]){
-        if (document.querySelector('.famas').textContent <= lista.length){
+        famas.textContent++;
+        toques.textContent++;
+        if (famas.textContent >= lista.length){
           document.querySelector('.winner').textContent = 'GANADOR';
-        }
-        document.querySelector('.famas').textContent++;
       } 
-      if (lista.includes(Number(userGuess[i]))){
-        document.querySelector('.toques').textContent++;
-      }
+
+        // document.querySelector('.famas').textContent++;
+      } 
+      if (lista.includes(Number(userGuess[i] && userGuess[0] != userGuess[i - 1]))){
+        // document.querySelector('.toques').textContent++;
+        toques.textContent++;
+      };
     };
   });
 })
