@@ -3,6 +3,7 @@ const modal = document.querySelector('.modal');
 const nameSendButton = document.querySelector('.sendName');
 const btnOpenModal = document.querySelector('.show-modal');
 const btnCloseModal = document.querySelector('.close-modal');
+// const playAgain = document.querySelector('.again');
 
 // btns
 let numberLength = (document.querySelector('.length'));
@@ -11,6 +12,7 @@ const digits = document.querySelector('.digits');
 let checkBtn = document.querySelector('.check');
 let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
+let playAgain = document.querySelector('again');
 
 // Info
 let changeDigits = function(){
@@ -55,7 +57,7 @@ startGame.addEventListener('click', function(length) {
     }
   }
   document.querySelector('.code').textContent = numberLoop(largo);
-
+  // document.querySelector('.code').classList.add('hidden');
   checkBtn.addEventListener('click', function(){
     let userGuess = (document.querySelector('.userCode').value);
   
@@ -65,17 +67,20 @@ startGame.addEventListener('click', function(length) {
       if (userGuess[i] == lista[i]){
         famas.textContent++;
         toques.textContent++;
-        if (famas.textContent >= lista.length){
+        if (famas.textContent == lista.length){
+          document.querySelector('.code').classList.remove('hidden');
           document.querySelector('.winner').textContent = 'GANADOR';
-      } 
-
-        // document.querySelector('.famas').textContent++;
-      } 
-      if (lista.includes(Number(userGuess[i] && userGuess[0] != userGuess[i - 1]))){
-        // document.querySelector('.toques').textContent++;
+        }
+      } else if (lista.includes(Number(userGuess[i]))){
         toques.textContent++;
       };
     };
   });
-})
+
+  playAgain.addEventListener('click', function(){
+    console.log('se esta llamndo');
+    famas.textContent = 0;
+  })
+  
+});
 

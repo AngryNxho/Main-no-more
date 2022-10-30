@@ -142,3 +142,13 @@ body{
     cursor: pointer;
 
 }
+
+.again{
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 60px;
+    width: 200px;
+    background-color: #fcbf49;
+    color: #d62828;
+    margin-top: 20px;
+}
