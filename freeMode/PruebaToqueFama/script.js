@@ -64,6 +64,7 @@ startGame.addEventListener('click', function(length) {
     let userGuess = (document.querySelector('.userCode').value);
   
     for (let i in lista){
+      famas = document.querySelector('.famas').textContent; 
       if (userGuess[i] == lista[i]){
         if (document.querySelector('.famas').textContent <= lista.length){
           document.querySelector('.winner').textContent = 'GANADOR';
@@ -74,9 +75,6 @@ startGame.addEventListener('click', function(length) {
         document.querySelector('.toques').textContent++;
       }
     };
-
-
-
   });
 })
 
