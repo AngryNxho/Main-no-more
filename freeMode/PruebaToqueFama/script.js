@@ -12,7 +12,7 @@ const digits = document.querySelector('.digits');
 let checkBtn = document.querySelector('.check');
 let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
-let playAgain = document.querySelector('again');
+let playAgain = document.querySelector('.again');
 
 // Info
 let changeDigits = function(){
@@ -77,10 +77,10 @@ startGame.addEventListener('click', function(length) {
     };
   });
 
-  playAgain.addEventListener('click', function(){
-    console.log('se esta llamndo');
-    famas.textContent = 0;
-  })
-  
+ 
 });
+playAgain.addEventListener('click', function(){
+  famas.textContent = 0;
+  toques.textContent = 0;
+})
 
