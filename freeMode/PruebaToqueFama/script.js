@@ -16,7 +16,7 @@ let playAgain = document.querySelector('.again');
 // Info
 let largo = document.querySelector('.digits').textContent = numberLength.value;
 let counter;
-let userGuess = document.querySelector('.userCode');
+let userGuess = (document.querySelector('.userCode'));
 let famas = document.querySelector('.famas');
 let toques = document.querySelector('.toques');
 const numberLoop = function(length) {
@@ -51,17 +51,28 @@ btnCloseModal.addEventListener('click', closeModal);
 startGame.addEventListener('click', function(){
   document.querySelector('.winner'). textContent = `Debes adivinar un codigo con ${numberLength.value} Digitos`;
   numberLoop(numberLength.value)
-  health = document.querySelector('.health').textContent = numberLength.value
-  
-});
 
-checkBtn.addEventListener('click', function(){
-  document.querySelector('.health').textContent--;
+
+
+
+  health = document.querySelector('.health').textContent = numberLength.value
+  checkBtn.addEventListener('click', function(){
+    for (let i = 0; i < lista.length; i++){
+        // famas.textContent++;
+        console.log(userGuess[i] == lista[i]);         
+    }
+    document.querySelector('.userCode').textContent = '';
+    document.querySelector('.health').textContent--;
   if (document.querySelector('.health').textContent < 1){
     document.querySelector('.health').textContent = 0;
     document.querySelector('.winner').textContent = 'GAME OVER'
   }
 })
+
+  
+
+});
+
 
  
 playAgain.addEventListener('click', function(){
