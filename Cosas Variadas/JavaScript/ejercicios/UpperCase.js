@@ -5,13 +5,18 @@
 function UpperCase(parameter){
 
     let string = String(parameter);
-    string = string.split(' ');
-    for (let i in string){ 
-        console.log(string[i][0].toUpperCase());
+    let string2 = string.split(' ');
+    let list = [];
+    for (let i in string2){ 
+        list.push(string2[i][0].toUpperCase());
     }
     
-
-    return ;
+    for (let x = 0; x < string.length; x++){
+        if (list.includes(string[x].toUpperCase())){
+            console.log(string[x].replace(string[x], string[x].toUpperCase()))
+        }
+    }
+    return string;
 }
 
 
