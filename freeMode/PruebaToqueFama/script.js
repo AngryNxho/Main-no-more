@@ -63,35 +63,27 @@ const letThefunBegins = function () {
     let userGuess = document.querySelector('.userCode').value;
 
     for (let i in lista) {
-      let counter = 0;
+      counter = 0;
       let z = 0;
       let y = 1;
-
+      
       if (userGuess[i] == lista[i]) {
-        counter++;
         famas.textContent++;
         toques.textContent++;
-        console.log(numberLength.value, counter); 
-        if (counter == numberLength.value){
-            document.querySelector('.winner').textContent = 'GANADOR';
-            document.querySelector('.health').textContent = health;
-        }      
-        setTimeout(() => {
-          console.log('TimeOut')
-          famas.textContent = 0;
-          toques.textContent = 0;
         
-        },2000);
+        // setTimeout(() => {
+        //   console.log('TimeOut')
+        //   famas.textContent = 0;
+        //   toques.textContent = 0;
+          
+        // },2000);
 
       }
-       else if (
-        (lista.includes(Number(userGuess[i])&&
-        userGuess[z] != userGuess[y]) ||
-      userGuess[0] != userGuess[userGuess - 1] ) ) {
+       else if (lista.includes(Number(userGuess[i])) && userGuess[z] != userGuess[y]){
         counter++;
         z++;
         y++;
-        // toques.textContent++;
+        toques.textContent++;
       }
     }
     document.querySelector('.userCode').textContent = '';
@@ -122,4 +114,10 @@ document.addEventListener('keydown', function(e) {
 playAgain.addEventListener('click', function () {
   famas.textContent = 0;
   toques.textContent = 0;
+  lista = [];
+  numberLength.value = (document.querySelector('.digits'));
+  document.querySelector('.winner').textContent = `Debes adivinar un codigo con ${numberLength.value} digitos`
+  health.value = 0;
+  document.querySelector('.userCode').value = '';
+
 });
