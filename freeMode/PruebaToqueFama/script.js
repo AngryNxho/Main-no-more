@@ -39,16 +39,17 @@ const openModal = function () {
 
 const closeModal = function () {
   modal.classList.add('hidden');
+
 };
 
 nameSendButton.addEventListener('click', function () {
   let username = document.querySelector('.name').value;
   document.querySelector('.sign').textContent = `Bienvenid(o/a) ${username}`;
 });
-
+const checkBtnFunction = 
 btnOpenModal.addEventListener('click', openModal);
 btnCloseModal.addEventListener('click', closeModal);
-startGame.addEventListener('click', function(){
+const letThefunBegins = function(){
   document.querySelector('.winner'). textContent = `Debes adivinar un codigo con ${numberLength.value} Digitos`;
   numberLoop(numberLength.value)
 
@@ -58,7 +59,7 @@ startGame.addEventListener('click', function(){
   checkBtn.addEventListener('click', function(){
   let userGuess = (document.querySelector('.userCode').value);
     for (let i in lista){
-      let counter = 0;
+      let counter = 1;
       let z = 0;
       let y = 1;
         if (userGuess[i] == lista[i]){
@@ -67,11 +68,8 @@ startGame.addEventListener('click', function(){
           toques.textContent++;
         } 
          if (counter == numberLength.value - 1){
-          famas.textContent = numberLength.value;
-          toques.textContent = numberLength.value;
+          famas.textContent = numberLength.value;;
           document.querySelector('.winner').textContent = 'GANADOR';
-          famas.textContent = 0;
-          toques.textContent = 0;
         }  else if (lista.includes(Number(userGuess[i])) && userGuess[z] != userGuess[y] || userGuess[0] != userGuess[userGuess-1] ){
         z++;
         y++;
@@ -88,7 +86,16 @@ startGame.addEventListener('click', function(){
 
   
 
-});
+}
+
+startGame.addEventListener('click', letThefunBegins);
+
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Enter'){
+    console.log('Escape was pressed');
+      (letThefunBegins());
+  }
+})
 
 
  
