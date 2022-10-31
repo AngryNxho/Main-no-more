@@ -61,15 +61,21 @@ const letThefunBegins = function () {
   health = document.querySelector('.health').textContent = numberLength.value;
   checkBtn.addEventListener('click', function () {
     let userGuess = document.querySelector('.userCode').value;
+
     for (let i in lista) {
-      let counter = 1;
+      let counter = 0;
       let z = 0;
       let y = 1;
+
       if (userGuess[i] == lista[i]) {
         counter++;
         famas.textContent++;
         toques.textContent++;
-        console.log(numberLength.value, counter);        
+        console.log(numberLength.value, counter); 
+        if (counter == numberLength.value){
+            document.querySelector('.winner').textContent = 'GANADOR';
+            document.querySelector('.health').textContent = health;
+        }      
         setTimeout(() => {
           console.log('TimeOut')
           famas.textContent = 0;
@@ -79,10 +85,10 @@ const letThefunBegins = function () {
 
       }
        else if (
-        (lista.includes(Number(userGuess[i])) &&
-          userGuess[z] != userGuess[y]) ||
-        userGuess[0] != userGuess[userGuess - 1]
-      ) {
+        (lista.includes(Number(userGuess[i])&&
+        userGuess[z] != userGuess[y]) ||
+      userGuess[0] != userGuess[userGuess - 1] ) ) {
+        counter++;
         z++;
         y++;
         // toques.textContent++;
