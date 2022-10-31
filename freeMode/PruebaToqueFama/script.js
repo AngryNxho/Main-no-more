@@ -98,22 +98,18 @@ const letThefunBegins = function () {
 };
 
 
-const keysFunction = 
 
 startGame.addEventListener('click', letThefunBegins);
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
     console.log('Enter was pressed');
     letThefunBegins();
-<<<<<<< HEAD
   } if (e.key === 'Escape'){
     console.log('escape was pressed');
   closeModal();
-=======
   } else if (e.key === 'Escape'){
     console.log('Escape was pressed');
     closeModal()
->>>>>>> e56b8ea4029e067aab8220722ea960a1f59fc044
   }
 });
 
