@@ -13,6 +13,7 @@ let checkBtn = document.querySelector('.check');
 let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
 let playAgain = document.querySelector('.again');
+
 // Info
 let largo = (document.querySelector('.digits').textContent =
   numberLength.value);
@@ -32,6 +33,10 @@ const numberLoop = function (length) {
   console.log(secretCode);
   return lista;
 };
+
+
+
+
 
 const openModal = function () {
   modal.classList.remove('hidden');
@@ -64,11 +69,16 @@ const letThefunBegins = function () {
         counter++;
         famas.textContent++;
         toques.textContent++;
+        console.log(numberLength.value, counter);        
+        setTimeout(() => {
+          console.log('TimeOut')
+          famas.textContent = 0;
+          toques.textContent = 0;
+        
+        },2000);
+
       }
-      if (counter == numberLength.value - 1) {
-        famas.textContent = numberLength.value;
-        document.querySelector('.winner').textContent = 'GANADOR';
-      } else if (
+       else if (
         (lista.includes(Number(userGuess[i])) &&
           userGuess[z] != userGuess[y]) ||
         userGuess[0] != userGuess[userGuess - 1]
@@ -91,8 +101,11 @@ startGame.addEventListener('click', letThefunBegins);
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Enter') {
-    console.log('Escape was pressed');
+    console.log('Enter was pressed');
     letThefunBegins();
+  } if (e.key === 'Escape'){
+    console.log('escape was pressed');
+  closeModal();
   }
 });
 
