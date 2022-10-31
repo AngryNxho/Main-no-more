@@ -16,7 +16,6 @@ let playAgain = document.querySelector('.again');
 // Info
 let largo = document.querySelector('.digits').textContent = numberLength.value;
 let counter;
-let userGuess = (document.querySelector('.userCode'));
 let famas = document.querySelector('.famas');
 let toques = document.querySelector('.toques');
 const numberLoop = function(length) {
@@ -32,6 +31,7 @@ const numberLoop = function(length) {
   console.log(secretCode);
   return lista;
 };
+
 
 const openModal = function () {
   modal.classList.remove('hidden');
@@ -54,12 +54,29 @@ startGame.addEventListener('click', function(){
 
 
 
-
   health = document.querySelector('.health').textContent = numberLength.value
   checkBtn.addEventListener('click', function(){
-    for (let i = 0; i < lista.length; i++){
-        // famas.textContent++;
-        console.log(userGuess[i] == lista[i]);         
+  let userGuess = (document.querySelector('.userCode').value);
+    for (let i in lista){
+      let counter = 0;
+      let z = 0;
+      let y = 1;
+        if (userGuess[i] == lista[i]){
+          counter++;
+          famas.textContent++;
+          toques.textContent++;
+        } 
+         if (counter == numberLength.value - 1){
+          famas.textContent = numberLength.value;
+          toques.textContent = numberLength.value;
+          document.querySelector('.winner').textContent = 'GANADOR';
+          famas.textContent = 0;
+          toques.textContent = 0;
+        }  else if (lista.includes(Number(userGuess[i])) && userGuess[z] != userGuess[y] || userGuess[0] != userGuess[userGuess-1] ){
+        z++;
+        y++;
+        // toques.textContent++;
+      };
     }
     document.querySelector('.userCode').textContent = '';
     document.querySelector('.health').textContent--;
