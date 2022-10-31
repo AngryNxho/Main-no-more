@@ -14,11 +14,12 @@ let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let lista = [];
 let playAgain = document.querySelector('.again');
 // Info
-let largo = document.querySelector('.digits').textContent = numberLength.value;
+let largo = (document.querySelector('.digits').textContent =
+  numberLength.value);
 let counter;
 let famas = document.querySelector('.famas');
 let toques = document.querySelector('.toques');
-const numberLoop = function(length) {
+const numberLoop = function (length) {
   while (length > lista.length) {
     if (lista.includes(randomNumber)) {
       randomNumber = Math.trunc(Math.random() * 9) + 1;
@@ -26,12 +27,11 @@ const numberLoop = function(length) {
       lista.push(randomNumber);
     }
   }
-  secretCode = lista
+  secretCode = lista;
   document.querySelector('.code').textContent = secretCode;
   console.log(secretCode);
   return lista;
 };
-
 
 const openModal = function () {
   modal.classList.remove('hidden');
@@ -39,68 +39,64 @@ const openModal = function () {
 
 const closeModal = function () {
   modal.classList.add('hidden');
-
 };
 
 nameSendButton.addEventListener('click', function () {
   let username = document.querySelector('.name').value;
   document.querySelector('.sign').textContent = `Bienvenid(o/a) ${username}`;
 });
-const checkBtnFunction = 
-btnOpenModal.addEventListener('click', openModal);
+const checkBtnFunction = btnOpenModal.addEventListener('click', openModal);
 btnCloseModal.addEventListener('click', closeModal);
-const letThefunBegins = function(){
-  document.querySelector('.winner'). textContent = `Debes adivinar un codigo con ${numberLength.value} Digitos`;
-  numberLoop(numberLength.value)
+const letThefunBegins = function () {
+  document.querySelector(
+    '.winner'
+  ).textContent = `Debes adivinar un codigo con ${numberLength.value} Digitos`;
+  numberLoop(numberLength.value);
 
-
-
-  health = document.querySelector('.health').textContent = numberLength.value
-  checkBtn.addEventListener('click', function(){
-  let userGuess = (document.querySelector('.userCode').value);
-    for (let i in lista){
+  health = document.querySelector('.health').textContent = numberLength.value;
+  checkBtn.addEventListener('click', function () {
+    let userGuess = document.querySelector('.userCode').value;
+    for (let i in lista) {
       let counter = 1;
       let z = 0;
       let y = 1;
-        if (userGuess[i] == lista[i]){
-          counter++;
-          famas.textContent++;
-          toques.textContent++;
-        } 
-         if (counter == numberLength.value - 1){
-          famas.textContent = numberLength.value;;
-          document.querySelector('.winner').textContent = 'GANADOR';
-        }  else if (lista.includes(Number(userGuess[i])) && userGuess[z] != userGuess[y] || userGuess[0] != userGuess[userGuess-1] ){
+      if (userGuess[i] == lista[i]) {
+        counter++;
+        famas.textContent++;
+        toques.textContent++;
+      }
+      if (counter == numberLength.value - 1) {
+        famas.textContent = numberLength.value;
+        document.querySelector('.winner').textContent = 'GANADOR';
+      } else if (
+        (lista.includes(Number(userGuess[i])) &&
+          userGuess[z] != userGuess[y]) ||
+        userGuess[0] != userGuess[userGuess - 1]
+      ) {
         z++;
         y++;
         // toques.textContent++;
-      };
+      }
     }
     document.querySelector('.userCode').textContent = '';
     document.querySelector('.health').textContent--;
-  if (document.querySelector('.health').textContent < 1){
-    document.querySelector('.health').textContent = 0;
-    document.querySelector('.winner').textContent = 'GAME OVER'
-  }
-})
-
-  
-
-}
+    if (document.querySelector('.health').textContent < 1) {
+      document.querySelector('.health').textContent = 0;
+      document.querySelector('.winner').textContent = 'GAME OVER';
+    }
+  });
+};
 
 startGame.addEventListener('click', letThefunBegins);
 
-document.addEventListener('keydown', function(e){
-  if (e.key === 'Enter'){
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
     console.log('Escape was pressed');
-      (letThefunBegins());
+    letThefunBegins();
   }
-})
+});
 
-
- 
-playAgain.addEventListener('click', function(){
+playAgain.addEventListener('click', function () {
   famas.textContent = 0;
   toques.textContent = 0;
-})
-
+});
