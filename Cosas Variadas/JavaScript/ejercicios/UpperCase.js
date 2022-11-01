@@ -13,10 +13,11 @@ function UpperCase(parameter){
     
     for (let x = 0; x < string.length; x++){
         if (list.includes(string[x].toUpperCase())){
-            console.log(string[x].replace(string[x], string[x].toUpperCase()))
+            console.log(string[0].replace(string[x], string[x].toUpperCase()))
         }
     }
-    return string;
+    return list;
+    
 }
 
 

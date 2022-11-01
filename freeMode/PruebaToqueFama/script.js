@@ -3,7 +3,6 @@ const modal = document.querySelector('.modal');
 const nameSendButton = document.querySelector('.sendName');
 const btnOpenModal = document.querySelector('.show-modal');
 const btnCloseModal = document.querySelector('.close-modal');
-// const playAgain = document.querySelector('.again');
 
 // btns functions
 let numberLength = document.querySelector('.length');
@@ -34,10 +33,6 @@ const numberLoop = function (length) {
   return lista;
 };
 
-
-
-
-
 const openModal = function () {
   modal.classList.remove('hidden');
 };
@@ -61,25 +56,31 @@ const letThefunBegins = function () {
   health = document.querySelector('.health').textContent = numberLength.value;
   checkBtn.addEventListener('click', function () {
     let userGuess = document.querySelector('.userCode').value;
+    counter = 0;
 
     for (let i in lista) {
-      counter = 0;
       let z = 0;
       let y = 1;
-      
+
       if (userGuess[i] == lista[i]) {
+        counter++;
         famas.textContent++;
         toques.textContent++;
-        
-        // setTimeout(() => {
-        //   console.log('TimeOut')
-        //   famas.textContent = 0;
-        //   toques.textContent = 0;
-          
-        // },2000);
-
-      }
-       else if (lista.includes(Number(userGuess[i])) && userGuess[z] != userGuess[y]){
+        console.log(userGuess == lista);
+        console.log(counter, numberLength.value);
+        if (counter == numberLength.value) {
+          document.querySelector('.winner').textContent = 'GANADOR';
+        } else {
+          setTimeout(() => {
+            console.log('TimeOut');
+            famas.textContent = 0;
+            toques.textContent = 0;
+          }, 4000);
+        }
+      } else if (
+        lista.includes(Number(userGuess[i])) &&
+        userGuess[z] != userGuess[y]
+      ) {
         counter++;
         z++;
         y++;
@@ -95,19 +96,15 @@ const letThefunBegins = function () {
   });
 };
 
-
-
 startGame.addEventListener('click', letThefunBegins);
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
   if (e.key === 'Enter') {
     console.log('Enter was pressed');
     letThefunBegins();
-  } if (e.key === 'Escape'){
+  }
+  if (e.key === 'Escape') {
     console.log('escape was pressed');
-  closeModal();
-  } else if (e.key === 'Escape'){
-    console.log('Escape was pressed');
-    closeModal()
+    closeModal();
   }
 });
 
@@ -115,9 +112,10 @@ playAgain.addEventListener('click', function () {
   famas.textContent = 0;
   toques.textContent = 0;
   lista = [];
-  numberLength.value = (document.querySelector('.digits'));
-  document.querySelector('.winner').textContent = `Debes adivinar un codigo con ${numberLength.value} digitos`
+  numberLength.value = document.querySelector('.digits');
+  document.querySelector(
+    '.winner'
+  ).textContent = `Debes adivinar un codigo con ${numberLength.value} digitos`;
   health.value = 0;
   document.querySelector('.userCode').value = '';
-
 });
