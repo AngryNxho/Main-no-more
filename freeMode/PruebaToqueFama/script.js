@@ -86,6 +86,7 @@ const letThefunBegins = function() {
         userGuess[z] != userGuess[y]
       ) {
         document.querySelector('.health').textContent--;
+        health.textContent--;
         counter++;
         z++;
         y++;
@@ -114,7 +115,6 @@ playAgain.addEventListener('click', function() {
   secretCode = [];
   famas.textContent = 0;
   toques.textContent = 0;
-  document.querySelector('.health').textContent = health;
   console.log(numberLength.value, toques.textContent, famas.textContent);
   document.querySelector('.code').textContent = '?';
   document.querySelector('.winner').textContent = `Debes adivinar un codigo con ${numberLength.value} digitos`;
