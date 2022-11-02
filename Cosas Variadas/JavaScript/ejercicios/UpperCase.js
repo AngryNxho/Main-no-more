@@ -4,15 +4,22 @@
 
 function UpperCase(parameter){
     let string = String(parameter);
-    string = string.toUpperCase()
-    let string2 = string.split(' ');
+    let separator = string.split(' ');
     let list = [];
-    for (let i in string2){ 
-        list.push(string.toUpperCase());
+
+    for (let x of separator){
+        list.push(x[0])
     }
 
-    return list
-    
+
+    for (let i of string){
+        console.log(i);
+        if (i == string[i]){
+            i.toUpperCase()
+        }
+    }
+
+    return list;
 }
 
 

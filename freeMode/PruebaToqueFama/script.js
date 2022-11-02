@@ -11,7 +11,9 @@ const digits = document.querySelector('.digits');
 let checkBtn = document.querySelector('.check');
 let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let secretCode = [];
+let health = (document.querySelector('.health'));
 const playAgain = document.querySelector('.again');
+
 
 // Info
 let largo = (document.querySelector('.digits').textContent =
@@ -32,6 +34,15 @@ const numberLoop = function (length) {
   console.log(secretCode);
   return secretCode;
 };
+
+const timeOutFunction = function(){
+  setTimeout(() => {
+        console.log('TimeOut');
+        famas.textContent = 0;
+        toques.textContent = 0;
+      }, 2000);
+}   
+
 
 const openModal = function () {
   modal.classList.remove('hidden');
@@ -73,29 +84,19 @@ const letThefunBegins = function() {
           document.querySelector('.winner').textContent = 'GANADOR';
           toques.textContent = numberLength.value;
           famas.textContent = numberLength.value;
-        } 
-        else {
-          setTimeout(() => {
-            console.log('TimeOut');
-            famas.textContent = 0;
-            toques.textContent = 0;
-          }, 2000);
+        } else{
+          timeOutFunction();
         }
       } else if (
         secretCode.includes(Number(userGuess[i])) &&
-        userGuess[z] != userGuess[y]
-      ) {
+        userGuess[z] != userGuess[y]){
         document.querySelector('.health').textContent--;
         health.textContent--;
         counter++;
         z++;
         y++;
         toques.textContent++;
-        setTimeout(() => {
-          console.log('TimeOut');
-          famas.textContent = 0;
-          toques.textContent = 0;
-        }, 2000);
+        timeOutFunction();
       }
     }
     document.querySelector('.userCode').textContent = '';
@@ -113,8 +114,8 @@ const letThefunBegins = function() {
 startGame.addEventListener('click', letThefunBegins);
 playAgain.addEventListener('click', function() {
   secretCode = [];
-  famas.textContent = 0;
-  toques.textContent = 0;
+  toques.textContent = numberLength;
+  famas.textContent = numberLength;
   console.log(numberLength.value, toques.textContent, famas.textContent);
   document.querySelector('.code').textContent = '?';
   document.querySelector('.winner').textContent = `Debes adivinar un codigo con ${numberLength.value} digitos`;
