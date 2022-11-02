@@ -3,20 +3,15 @@
 
 
 function UpperCase(parameter){
-
     let string = String(parameter);
+    string = string.toUpperCase()
     let string2 = string.split(' ');
     let list = [];
     for (let i in string2){ 
-        list.push(string2[i][0].toUpperCase());
+        list.push(string.toUpperCase());
     }
-    
-    for (let x = 0; x < string.length; x++){
-        if (list.includes(string[x].toUpperCase())){
-            console.log(string[0].replace(string[x], string[x].toUpperCase()))
-        }
-    }
-    return list;
+
+    return list
     
 }
 
