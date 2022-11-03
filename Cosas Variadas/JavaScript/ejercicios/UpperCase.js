@@ -12,16 +12,8 @@ function UpperCase(parameter){
     }
 
 
-    for (let i of string){
-        console.log(i);
-        if (i == string[i]){
-            i.toUpperCase()
-        }
-    }
-
-    return list;
+    return string;
 }
 
 
 console.log(UpperCase('hello world'));
-fallin
