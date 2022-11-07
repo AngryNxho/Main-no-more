@@ -6,16 +6,24 @@ function UpperCase(parameter){
     let string = String(parameter);
     let separator = string.split(' ');
     let list = [];
-
+    let finalList = [];
     for (let x of separator){
-        list.push(x[0])
+        list.push(x[0].toLowerCase());
+    }
+
+    for (let i of string){
+        console.log();
+        if (list.includes(i)){
+            finalList += i.toUpperCase();
+        } else{
+            finalList += i
+        }
     }
 
 
-    return string;
+    return finalList;
 }
 
 
 
-
-console.log(UpperCase('hello world'));
+console.log(UpperCase('hola mi nombre es ignacio manriquez'));
