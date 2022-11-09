@@ -26,4 +26,4 @@ function UpperCase(parameter){
 
 
 
-console.log(UpperCase('hola mi nombre es ignacio manriquez'));
+console.log(UpperCase(''));
