@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>ToqueFama</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido al Juego Toque y Fama Version JavaScript <img src="./JavaScript-logo.png" alt="logo" class="logojs"></h1>
+        <input type="text" placeholder="Ingrese su nombre" class="name">
+        <br>
+        <button class="sendName">Ingresar</button>
+    </header>
+
+
+    <div class="sign">
+        <p></p>
+    </div>
+    <br>
+    <br>
+    <button class="show-modal">Reglas</button>
+    <div class="modal hidden">
+        <h1>El juego consiste en lo siguiente...</h1>
+        <button class="close-modal">&times;</button>
+        <ul>
+            <li>Debes seleccionar el largo del numero (este sera la cantidad de vidas que tengas)</li>
+            <li>El juego consta de adivinar un codigo secreto con un x largo de numeros</li>
+            <li>Un Toque ocurre cuando le aciertas a un numero que esta en el codigo secreto</li>
+            <li>Una Fama ocurre cuando le aciertas a la posicion de uno o mas numeros dentro del codigo secreto</li>
+            </ul>
+        </div>
+
+
+    <div class="game">
+        <label>Eliga el largo de su numero: </label>
+        <input type="number" class="length" placeholder="0">
+        <button class="start">Comenzar</button>
+        <br>
+        <br>
+        <label class="winner">Debes adivinar un codigo con <span class="digits">0</span> Digitos</label>
+        <br>
+        <input type="number" class="userCode">
+        <br>
+         <button class="check">Comprobar</button>
+    </div>
+
+    
+
+
+    <div class="stats">
+        <p>Toques: <span class="toques">0</span></p>
+        <p>Famas: <span class="famas">0</span></p>
+        <p>Vidas: <span class="health">0</span></p>
+        <p>Codigo: <span class="code">?</span></p>
+        <button class="again">Jugar de nuevo</button>
+    </div> 
+
+    <script src="./script.js"></script>
+</body> 
+</html>
