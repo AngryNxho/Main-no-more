@@ -9,9 +9,22 @@ function upperCase(string){
         array.push(i[0])
     }
 
-    
-    return array;
+    let sum = [];
+
+
+    for (let x = 0; x < checking.length; x++){
+        if (array.includes(checking[x])){
+            
+            array.shift();
+
+            sum+= checking[x].toUpperCase();
+        } else{
+            sum+= checking[x];
+            array.unshift();
+        }
+    }    
+    return sum;
 }
 
 
-console.log(upperCase('hola mundo'));
+console.log(upperCase('hola mi nombre es ignacio manriquez'));
