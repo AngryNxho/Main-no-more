@@ -11,7 +11,7 @@ const digits = document.querySelector('.digits');
 let checkBtn = document.querySelector('.check');
 let randomNumber = Math.trunc(Math.random() * 9) + 1;
 let secretCode = [];
-let health = document.querySelector('.health');
+let health = (document.querySelector('.health'));
 const playAgain = document.querySelector('.again');
 
 
@@ -31,6 +31,7 @@ const numberLoop = function (length) {
   }
   secretCode = secretCode;
   document.querySelector('.code').textContent = secretCode;
+  console.log(secretCode);
   return secretCode;
 };
 
@@ -39,7 +40,7 @@ const timeOutFunction = function(){
         console.log('TimeOut');
         famas.textContent = 0;
         toques.textContent = 0;
-      },1000);
+      }, 2000);
 }   
 
 
@@ -57,9 +58,7 @@ nameSendButton.addEventListener('click', function () {
 });
 const checkBtnFunction = btnOpenModal.addEventListener('click', openModal);
 btnCloseModal.addEventListener('click', closeModal);
-
-startGame.addEventListener('click',function() {
-  famas.textContent = 0;
+const letThefunBegins = function() {
   document.querySelector(
     '.winner'
   ).textContent = `Debes adivinar un codigo con ${numberLength.value} Digitos`;
@@ -67,31 +66,59 @@ startGame.addEventListener('click',function() {
 
   health = document.querySelector('.health').textContent = numberLength.value;
   checkBtn.addEventListener('click', function (){
-    let userGuess = (document.querySelector('.userCode').value);
-    secretCode = (secretCode)
+    let userGuess = document.querySelector('.userCode').value;
     counter = 0;
-    c2 = 0;
 
+    for (let i in secretCode) {
+      let z = 0;
+      let y = 1;
 
-    //ACA ESTA EL BUG DE MIERDA
-    for (let i = 0; i < secretCode.length; i++){
-      let x = 2;
-      if (secretCode.includes(Number(userGuess[i])) && userGuess[i] != userGuess[x]){
-        x++;
+      if (userGuess[i] == secretCode[i]) {
+        counter++;
+        famas.textContent++;
         toques.textContent++;
-      } 
-    }
 
+        if (counter == numberLength.value) {
+          document.querySelector('.winner').textContent = 'GANADOR';
+          toques.textContent = numberLength.value;
+          famas.textContent = numberLength.value;
+        } else{
+          timeOutFunction();
+        }
+      } else if (
+        secretCode.includes(Number(userGuess[i])) &&
+        userGuess[z] != userGuess[y]){
+        document.querySelector('.health').textContent--;
+        health.textContent--;
+        counter++;
+        z++;
+        y++;
+        toques.textContent++;
+        timeOutFunction();
+      }
+    }
     document.querySelector('.userCode').textContent = '';
     if (document.querySelector('.health').textContent < 1) {
       document.querySelector('.health').textContent = 0;
       document.querySelector('.winner').textContent = 'GAME OVER';
+      // toques.textContent = 0;
+      // famas.textContent = 0;
       
     }
   });
   
-});
+};
 
+startGame.addEventListener('click', letThefunBegins);
+playAgain.addEventListener('click', function() {
+secretCode = [];
+toques.textContent = numberLength.value = 0;
+famas.textContent = numberLength.value = 0;
+console.log(numberLength.value, toques.textContent, famas.textContent);
+document.querySelector('.code').textContent = '?';
+document.querySelector('.winner').textContent = `Debes adivinar un codigo con ${numberLength.value} digitos`;
+console.log(secretCode);
+});
 
 
 document.addEventListener('keydown',function(e) {

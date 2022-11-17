@@ -1,30 +1,21 @@
-function upperCase(string){
-    let checking = string;
-    let stringContainer = [];
-    stringContainer.push(string)
-    let parameter = string.split(' ')
-    let array = [];
+const str = 'Hello world my names ignacio Manriquez';
 
-    for (let i of parameter){
-        array.push(i[0])
-    }
+//split the above string into an array of strings 
+//whenever a blank space is encountered
 
-    let sum = [];
+const arr = str.split(" ");
+
+//loop through each element of the array and capitalize the first letter.
 
 
-    for (let x = 0; x < checking.length; x++){
-        if (array.includes(checking[x])){
-            
-            array.shift();
+for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
 
-            sum+= checking[x].toUpperCase();
-        } else{
-            sum+= checking[x];
-            array.unshift();
-        }
-    }    
-    return sum;
 }
 
+//Join all the elements of the array back into a string 
+//using a blankspace as a separator 
+const str2 = arr.join(" ");
+console.log(str2);
 
-console.log(upperCase('hola mi nombre es ignacio manriquez'));
+//Outptut: I Have Learned Something New Today
