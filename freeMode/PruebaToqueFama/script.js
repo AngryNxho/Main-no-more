@@ -33,7 +33,7 @@ const numberLoop = function (length) {
   // document.querySelector('.code').textContent = secretCode;
   console.log(secretCode);
   return secretCode;
-};
+}; 
 
 const timeOutFunction = function(){
   setTimeout(() => {
