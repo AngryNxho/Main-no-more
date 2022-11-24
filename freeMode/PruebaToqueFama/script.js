@@ -121,8 +121,6 @@ checkBtn.addEventListener('click', function (){
       document.querySelector('.health').textContent = 0;
       document.querySelector('.winner').textContent = 'GAME OVER';
       document.querySelector('.code').textContent = `El codigo era ${secretCode}`;
-      // toques.textContent = 0;
-      // famas.textContent = 0;
       
     }
   });
