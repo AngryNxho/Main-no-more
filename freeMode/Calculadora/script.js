@@ -1,11 +1,43 @@
-const one = document.querySelector('.one');
-const two = document.querySelector('.two');
-const three = document.querySelector('.three');
-const four = document.querySelector('.four');
-const five = document.querySelector('.five');
-const six = document.querySelector('.six');
-const seven = document.querySelector('.seven');
-const eight = document.querySelector('.eight');
-const nine = document.querySelector('.nine');
-const zero = document.querySelector('.zero');
-const results = document.querySelector('.results');
+let one = document.querySelector('.one');
+let two = document.querySelector('.two');
+let three = document.querySelector('.three');
+let four = document.querySelector('.four');
+let five = document.querySelector('.five');
+let six = document.querySelector('.six');
+let seven = document.querySelector('.seven');
+let eight = document.querySelector('.eight');
+let nine = document.querySelector('.nine');
+let zero = document.querySelector('.zero');
+let results = document.querySelector('p');
+let equal = document.querySelector('.equal');
+let del = document.querySelector('.delete');
+
+
+
+
+one.addEventListener('click', () => {
+    results.textContent = 1;
+});
+
+two.addEventListener('click', () => {
+    results.textContent = 2;
+});
+
+three.addEventListener('click', () => {
+    results.textContent = 3;
+});
+
+
+
+
+equal.addEventListener('click', () => {
+    results.textContent = 2+2;
+    console.log('final');
+});
+
+del.addEventListener('click', () => {
+    results.textContent = 0;
+    console.log('delete');
+});
+
+

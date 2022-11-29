@@ -35,12 +35,14 @@ button:hover{
     color: #fca311;
 }
 .results {
-    justify-content: center;
-    justify-items: center;
     margin: 20px;
     height: 50px;
     border-radius: 5px;
     border: solid 4px whitesmoke;
     background-color: #fca311;
     
+}
+
+.results p{
+    margin-top: 10px;
 }

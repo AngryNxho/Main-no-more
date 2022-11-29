@@ -14,7 +14,8 @@
             <button class="seven">7</button>
             <button class="eight">8</button>
             <button class="nine">9</button>
-            <button class="div">/</button>
+           
+ <button class="div">/</button>
         </div>
         <tr></tr>
         <div class="second">
@@ -36,10 +37,10 @@
             <button class="float">,</button>
             <button class="plus">+</button>
             <br>
-            <button class="delete"> C</button>
             <button class="equal"> =</button>
+            <button class="delete"> C</button>
         </div>
-        <div class="results"> <p></p></div>
+        <div class="results"></div>
 
     </div>
     <script src="script.js"></script>
