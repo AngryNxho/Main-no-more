@@ -12,7 +12,11 @@ let results = document.querySelector('p');
 let equal = document.querySelector('.equal');
 let del = document.querySelector('.delete');
 
+let btn = document.querySelector('button');
 
+btn.addEventListener('click', () => {
+    btn.style.width = '2px';
+})
 
 
 one.addEventListener('click', () => {
@@ -27,6 +31,34 @@ three.addEventListener('click', () => {
     results.textContent = 3;
 });
 
+four.addEventListener('click', () => {
+results.textContent = 4;
+});
+
+five.addEventListener('click', () => {
+    results.textContent = 5;
+});
+
+six.addEventListener('click', () => {
+    results.textContent = 6;
+});
+   
+seven.addEventListener('click', () => {
+    results.textContent = 7;
+});
+
+eight.addEventListener('click', () => {
+    results.textContent = 8;
+});
+
+nine.addEventListener('click', () => {
+    results.textContent = 9;
+});
+
+zero.addEventListener('click', () => {
+    results.textContent = 0;
+});
+
 
 
 
@@ -36,7 +68,7 @@ equal.addEventListener('click', () => {
 });
 
 del.addEventListener('click', () => {
-    results.textContent = 0;
+    results.textContent = '';
     console.log('delete');
 });
 
