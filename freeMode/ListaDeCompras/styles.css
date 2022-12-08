@@ -1,0 +1,44 @@
+html {
+    padding: 0;
+    margin-top: 30px;
+    font-family: Montserrat;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.box{
+    background-color: lightblue;
+    height: 800px;
+    width: 1000px; 
+    margin: auto;
+    border-radius: 5px;
+}
+
+.head{
+    text-align: center;
+    margin: auto;
+}
+
+.content{
+    text-align: center;
+    background-color: whitesmoke;
+    width: 500px;
+    height: 400px;
+    margin-top:50px;
+    margin-left: 250px;
+    
+}
+
+input[type = "text"]{
+    text-align: center;
+    height: 40px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.submit{
+    height: 45px;
+    border-radius: 5px;
+}
