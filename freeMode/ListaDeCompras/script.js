@@ -3,10 +3,8 @@ const content = document.querySelector('.content');
 let input = document.querySelector('input');
 
 btn.addEventListener('click', () => {
-  let array = [];
-  let element = document.createElement('p');
-  element.textContent = input.textContent;
-  content.insertAdjacentHTML('beforeend', element.textContent);
-  console.log(array);
-  console.log(array.length);
+  let elemento = document.createElement('li');
+  elemento.textContent = input.value;
+  content.insertAdjacentHTML('beforeend', elemento.textContent)
+
 });

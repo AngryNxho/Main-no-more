@@ -22,14 +22,14 @@ body{
 }
 
 .content{
-    text-align: center;
     background-color: whitesmoke;
+    text-align: center;
     width: 500px;
     height: 400px;
     margin-top:50px;
     margin-left: 250px;
-    
 }
+
 
 input[type = "text"]{
     text-align: center;
