@@ -1,33 +1,44 @@
 html {
     padding: 0;
-    margin-top: 30px;
     font-family: Montserrat;
+    min-height: 100%;
+    color: #f1faee;
 }
 
 body{
-    background-color: whitesmoke;
+    background: linear-gradient(#f1faee);
 }
 
 .box{
-    background-color: lightblue;
+    background: linear-gradient(to top right,#457b9d,#1d3557);
     height: 800px;
     width: 1000px; 
     margin: auto;
     border-radius: 5px;
+    box-shadow: 15px 10px 20px 15px red;
 }
 
 .head{
     text-align: center;
     margin: auto;
+    /* text-shadow: 2px 2px red; */
+    text-shadow: -1px 0 red, 0 2px red, 2px 0 red, 0 -1px red;
+
 }
 
 .content{
-    background-color: whitesmoke;
+    color: #1d3557;
+    background: linear-gradient(#f1faee, #bde0fe);
     text-align: center;
     width: 500px;
     height: 400px;
     margin-top:50px;
-    margin-left: 250px;
+    margin-left: 230px;
+    overflow-x: hidden;
+    overflow-y: scroll;    
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, .5);
+    font-size: 20px;
+    border-radius: 5px;
 }
 
 
@@ -36,9 +47,18 @@ input[type = "text"]{
     height: 40px;
     width: 400px;
     border-radius: 5px;
+    font-size: 20px;
 }
 
 .submit{
     height: 45px;
     border-radius: 5px;
+}
+
+
+.content .btns{
+    position: fixed;
+    margin-left: 210px;
+    margin-top: 350px;
+    
 }
