@@ -15,7 +15,7 @@ body{
     width: 1000px; 
     margin: auto;
     border-radius: 5px;
-    box-shadow: 15px 10px 20px 15px red;
+    border: solid red 4px;
 }
 
 .head{
@@ -48,6 +48,7 @@ input[type = "text"]{
     width: 400px;
     border-radius: 5px;
     font-size: 20px;
+    background-color: #bde0fe;
 }
 
 .submit{
@@ -61,4 +62,16 @@ input[type = "text"]{
     margin-left: 210px;
     margin-top: 350px;
     
+}
+
+/* letters */
+.hidden{
+    margin-left: 90px;
+}
+
+/* btn */
+.hidden button{
+    margin-left: 20px;
+    background-color: red;
+    color: white;
 }
