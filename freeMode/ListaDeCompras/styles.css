@@ -6,7 +6,7 @@ html {
 }
 
 body{
-    background: linear-gradient(#f1faee);
+    background: #000000;
 }
 
 .box{
@@ -54,6 +54,7 @@ input[type = "text"]{
 .submit{
     height: 45px;
     border-radius: 5px;
+    background-color: #f1faee;
 }
 
 
@@ -71,7 +72,18 @@ input[type = "text"]{
 
 /* btn */
 .hidden button{
+    text-align: center;
     margin-left: 20px;
     background-color: red;
     color: white;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+
+button:hover{
+    background: #1d3557;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, .5);
+    cursor: pointer;
 }
