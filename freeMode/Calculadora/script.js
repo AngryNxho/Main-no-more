@@ -1,12 +1,16 @@
 const allNums = document.querySelectorAll('.nums');
+const sign = document.querySelectorAll('.signs')
 let input = document.querySelector('.input');
-const numsArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let one = [];
+let x = 0;
 allNums.forEach(allNums => {
-  allNums.addEventListener('click', e => {
-    if (allNums.innerHTML == numsArray[0]) {
-      input.textContent = numsArray[0];
-    } else if (allNums.innerHTML == numsArray[1]) {
-      input.textContent = numsArray[1];
-    }
+  allNums.addEventListener('click', () => {
+    input.textContent = (allNums.textContent[x]);
+
   });
 });
+
+sign.forEach(sign => {
+  sign.addEventListener('click', () => 
+  input.textContent = (sign.textContent[x]))
+})
