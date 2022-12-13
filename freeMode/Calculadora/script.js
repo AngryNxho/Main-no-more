@@ -1,39 +1,81 @@
 const allNums = document.querySelectorAll('.nums');
 const sign = document.querySelectorAll('.signs');
-const equal = document.querySelectorAll('.equal');
+const equal = document.querySelector('.equal');
+const elevate = document.querySelector('.signEl');
 let input = document.querySelector('.input');
-let one = [];
-let array = [];
+let operatorSigns = [];
+let numberSum =[];
+let backup = [];
 allNums.forEach(allNums => {
   allNums.addEventListener('click', () => {
-    input.textContent = allNums.textContent;
-    one.push(allNums.innerHTML);
-    console.log(input.textContent);
+    numberSum += allNums.textContent;
+    input.textContent = numberSum;
+    console.log(numberSum.length);
   });
 });
+
 
 sign.forEach(sign => {
   sign.addEventListener('click', () => {
-    input.textContent = sign.textContent;
-    array.push(sign.innerHTML);
-    console.log(array[array.length - 1]);
+    let createSign = document.createElement('sup');
+    backup.push(input.textContent);
+    createSign.textContent = sign.textContent;  
+    if (createSign.textContent == '+'){
+      operatorSigns.push('+');
+      numberSum = [];
+      setTimeout( () => {
+        input.textContent = '0';
+      },500)
+      input.appendChild(createSign);
+      
+    } else if (createSign.textContent == '-'){
+      operatorSigns.push('-');
+      numberSum = [];
+      setTimeout( () => {
+        input.textContent = '0';
+      },500)
+      input.appendChild(createSign);
+      
+    } else if (createSign.textContent == '*'){
+      operatorSigns.push('*');
+      numberSum = [];
+      setTimeout( () => {
+        input.textContent = '0';
+      },500)
+      input.appendChild(createSign);
+      
+    } else{
+      operatorSigns.push('/');
+      numberSum = [];
+      setTimeout( () => {
+        input.textContent = '0';
+      },500)
+      input.appendChild(createSign);
+    }
+    
+    
+   
   });
 });
 
-equal.forEach(equal => {
-  equal.addEventListener('click', () => {
-    if (array[array.length - 1] == '+') {
-      let sum = Number(one[one.length - 2]) + Number(one[one.length - 1]);
-      input.textContent = sum;
-    } else if (array[array.length - 1] == '-') {
-      let res = Number(one[one.length - 2]) - Number(one[one.length - 1]);
-      input.textContent = res;
-    } else if (array[array.length - 1] == '*') {
-      let mult = Number(one[one.length - 2]) * Number(one[one.length - 1]);
-      input.textContent = mult;
-    } else {
-      let div = Number(one[one.length - 2]) / Number(one[one.length - 1]);
-      input.textContent = div;
-    }
-  });
+
+equal.addEventListener('click', () => {
+  if (operatorSigns[operatorSigns.length - 1] == '+'){
+    console.log(operatorSigns);
+    backup.push(numberSum[numberSum.length - 1])
+    input.textContent = (Number(backup[backup.length - 2]) + Number(backup[backup.length - 1]));
+  }else if (operatorSigns[operatorSigns.length - 1] == '-'){
+    console.log(operatorSigns);
+    backup.push(numberSum[numberSum.length - 1])
+    input.textContent = (Number(backup[backup.length - 2]) - Number(backup[backup.length - 1]));
+  }else if (operatorSigns[operatorSigns.length - 1] == '*'){
+    console.log(operatorSigns);
+    backup.push(numberSum[numberSum.length - 1])
+    input.textContent = (Number(backup[backup.length - 2]) * Number(backup[backup.length - 1]));
+  } else{
+    console.log(operatorSigns);
+    backup.push(numberSum[numberSum.length - 1])
+    input.textContent = (Number(backup[backup.length - 2]) / Number(backup[backup.length - 1]));
+
+  }
 });
