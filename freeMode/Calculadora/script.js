@@ -31,10 +31,25 @@ sign.forEach(sign => {
     },100)
     operatorSigns.push(createSign.textContent);
     if (operatorSigns[operatorSigns.length - 1] == '+'){
-        // sum += Number(backup[backup.length - 1]);
+        sum += Number(backup[backup.length - 1]);
         input.textContent = sum;
         input.appendChild(createSign);
-    };
+    } else if (operatorSigns[operatorSigns.length - 1] == '-'){
+      sum -= Number(backup[backup.length - 1]);
+      input.textContent = sum;
+      input.appendChild(createSign);
+    } else if (operatorSigns[operatorSigns.length - 1] == '*'){
+      sum = 1;
+      sum *= Number(backup[backup.length - 1]);
+      input.textContent = sum;
+      input.appendChild(createSign);
+    } else{
+      sum /=Number(backup[backup.length - 1]);
+      input.textContent = sum;
+      input.appendChild(createSign);
+  
+    }
+
   });
 });
 
