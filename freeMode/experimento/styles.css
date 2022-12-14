@@ -1,17 +1,9 @@
-html{
-    margin: 0;
-    padding: 0;
-}
-
-body{
+.div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: red;
-}
-
-div{
-
-    height:30px;
-    width: 30px;
-    margin: 50%;
-    background-color: white;
-    
+    height: 60px;
+    width: 60px;
 }
