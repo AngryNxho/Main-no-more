@@ -6,7 +6,11 @@ let input = document.querySelector('.input');
 let operatorSigns = [];
 let numberSum =[];
 let backup = [];
-let result = [];
+let sum = 0;
+let mult = 1;
+let resta = backup[backup.length - 1];
+
+
 allNums.forEach(allNums => {
   allNums.addEventListener('click', () => {
     numberSum += allNums.textContent;
@@ -16,10 +20,7 @@ allNums.forEach(allNums => {
   });
 });
 
-let operator = (operatorSigns[operatorSigns.length - 1] == '+');
 let createSign = document.createElement('sup');
-let sum = 0;
-let less = backup[backup.length - 1];
 
 sign.forEach(sign => {
   sign.addEventListener('click', () => {
@@ -27,35 +28,37 @@ sign.forEach(sign => {
     input.appendChild(createSign);
     setTimeout( () => {
       createSign.textContent = createSign.textContent;
+      let a = numberSum;
       numberSum = [];
     },100)
     operatorSigns.push(createSign.textContent);
     if (operatorSigns[operatorSigns.length - 1] == '+'){
-        sum += Number(backup[backup.length - 1]);
-        input.textContent = sum;
-        input.appendChild(createSign);
+      sum += Number(backup[backup.length - 1]);
+      input.textContent = sum;
+      input.appendChild(createSign);
+      
+    }else if (operatorSigns[operatorSigns.length - 1] == '*'){
+      mult *= Number(backup[backup.length - 1]);
+      input.textContent = mult;
+      input.appendChild(createSign);
+      console.log(backup);
     } else if (operatorSigns[operatorSigns.length - 1] == '-'){
-      sum -= Number(backup[backup.length - 1]);
-      input.textContent = sum;
       input.appendChild(createSign);
-    } else if (operatorSigns[operatorSigns.length - 1] == '*'){
-      sum = 1;
-      sum *= Number(backup[backup.length - 1]);
-      input.textContent = sum;
-      input.appendChild(createSign);
-    } else{
-      sum /=Number(backup[backup.length - 1]);
-      input.textContent = sum;
-      input.appendChild(createSign);
-  
-    }
 
+      resta = Number(backup[backup.length - 2]);
+      if (backup.length > 1){
+        resta -= (Number(backup[backup.length - 1]));
+        input.textContent = resta;
+
+      }
+
+    }
   });
 });
 
 equal.addEventListener('click', () => {
-  sum += Number(backup[backup.length - 1])
-  input.textContent = sum;
-  console.log(sum.length);
-
+  if (operatorSigns[operatorSigns.length - 1] == '+'){
+    sum += Number(backup[backup.length - 1])
+    input.textContent = sum;
+  }
 });
