@@ -6,7 +6,7 @@ html{
 }
 
 body{
-    background: linear-gradient(to top, #d4a373, #faedcd);
+    background: linear-gradient(to top, #a2d2ff, #ffafcc);
 }
 
 h1{
@@ -14,16 +14,12 @@ h1{
 }
 
 header{
-    color: #d4a373;
+    color: #ffb703;
     text-align: center;
     margin-top: 300px;
     text-shadow: 6px 6px 6px rgba(0, 0, 0,.9);
 }
 
-header h1{
-    border: solid 4px #d4a373;
-    background: rgba(0, 0, 0,.5);
-}
 
 
 .hidden{
@@ -49,10 +45,11 @@ input[type = "text"]{
 
 
 button{
-    background: #faedcd;
+background: #faedcd;
    padding: 20px;
    margin-top: 20px;
    border-radius: 10px;
    border: solid 4px rgba(0, 0, 0,.5);
    cursor: pointer;
+   font-size: 20px;
 }

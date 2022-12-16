@@ -11,6 +11,7 @@ let mult = 1;
 let resta = backup[backup.length - 1];
 
 
+
 allNums.forEach(allNums => {
   allNums.addEventListener('click', () => {
     numberSum += allNums.textContent;
@@ -41,7 +42,6 @@ sign.forEach(sign => {
       mult *= Number(backup[backup.length - 1]);
       input.textContent = mult;
       input.appendChild(createSign);
-      console.log(backup);
     } else if (operatorSigns[operatorSigns.length - 1] == '-'){
       input.appendChild(createSign);
 
@@ -52,7 +52,7 @@ sign.forEach(sign => {
 
       }
 
-    }
+    } 
   });
 });
 
@@ -60,5 +60,30 @@ equal.addEventListener('click', () => {
   if (operatorSigns[operatorSigns.length - 1] == '+'){
     sum += Number(backup[backup.length - 1])
     input.textContent = sum;
+    input.appendChild(createSign);
+
+  } else if (operatorSigns[operatorSigns.length - 1] == '*'){
+    mult *= Number(backup[backup.length - 1]);
+    input.textContent = mult;
+    console.log(backup);
+  }else if (operatorSigns[operatorSigns.length - 1] == '-'){
+    input.appendChild(createSign);
+
+    resta = Number(backup[backup.length - 2]);
+    if (backup.length > 1){
+      resta -= (Number(backup[backup.length - 1]));
+      input.textContent = resta;
+
+    }else{
+      input.appendChild(createSign);
+
+      resta = Number(backup[backup.length - 2]);
+      if (backup.length > 1){
+        resta /= (Number(backup[backup.length - 1]));
+        input.textContent = resta;
+
+      }
+
+    }
   }
 });
