@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.parent{
+    position: relative;
+    width: 20px;
+    left: 310px;
+}
+
+
+.childTwo{
+    display: none;
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    width: 200px;
+    height: 200px;
+}
+
+.childOne:hover{
+    background: rgba(0,0,0,.5);
+}
+
+
+.parent:hover .childTwo{
+    display: block;
+}
+
+.parent:hover .childTwo:hover{
+    background-color: green;
+}
+

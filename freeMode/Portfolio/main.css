@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    min-height: 100%;
+}
+
+body{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 600px ;
+    background: #edf2f4;
+    margin-bottom: 4px solid black;
+}
+
+hr{
+    position: relative;
+    top: 250px;
+}
+
+header{
+    text-align: center;
+    position: relative;
+    left: 100px;
+    top: 150px;
+}
+
+.foto{
+    position: absolute;
+    left: 60px;
+    top: 60px;
+}
+
+
+
