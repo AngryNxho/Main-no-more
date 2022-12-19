@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    background: url(https://wallpaperaccess.com/full/99810.jpg) no-repeat ;
+    background-size: cover;
+}
+
+.account{
+    text-align: right;
+    margin: 10px;
+}
+
+.account img{
+    position: relative;
+    top: 10px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.content h1{
+    color: whitesmoke;
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+    margin: 250px;
+}
+
+.searchBar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 200px;
+    height: 50px;
+}
+
+.searchBar input[type="search"]{
+    text-align: center;
+    padding: 15px;
+    width: 500px;
+    border-radius: 50px;
+    border: none;
+}
+
+
+.searchBar img{
+    position: absolute;
+    height: 35px;
+    border-radius: 100px;
+    right: 1170px;
+    top: 10px;
+    
+}
