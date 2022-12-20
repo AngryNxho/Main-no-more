@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.field{
+    display: block;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/8/82/Soccer_Field_Transparant.svg) no-repeat;
+    height: 970px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    background-size: 100% 100%;
+}
+
+.ball{
+    position: relative;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg) no-repeat;
+    height: 100%;
+    background-size: 30px;
+    left: 48.5%;
+    top: 48%;
+}
+
+#player{
+    
+    position: relative;
+    background: red;
+    height: 20px;
+    width: 20px;
+    left: 48.5%;
+    top: 90%;
+}
+
+*{
+    overflow: hidden;
+}
