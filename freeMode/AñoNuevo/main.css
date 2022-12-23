@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap'); 
 html{
-    
     min-height: 100%;
     font-family: Montserrat, sans-serif;
 }
@@ -16,7 +15,6 @@ h1{
 header{
     color: #ffb703;
     text-align: center;
-    margin-top: 300px;
     text-shadow: 6px 6px 6px rgba(0, 0, 0,.9);
 }
 
@@ -52,4 +50,75 @@ background: #faedcd;
    border: solid 4px rgba(0, 0, 0,.5);
    cursor: pointer;
    font-size: 20px;
+}
+
+.image{
+    text-align: center;
+}
+
+.image img{
+    cursor: pointer;
+    border: solid 4px black;
+    border-radius: 100px;
+}
+
+.fran{
+    font-weight: bold;
+    color: #f1faee;
+    padding: 20px;
+    background: linear-gradient(#457b9d, #1d3557);
+    border: solid 4px #a2d2ff;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+}
+
+.lucas{
+    font-weight: bold;
+    color: #f1faee;
+    padding: 20px;
+    background: linear-gradient(#457b9d, #1d3557);
+    border: solid 4px #a2d2ff;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+}
+
+.papa{
+    font-weight: bold;
+    color: #f1faee;
+    padding: 20px;
+    background: linear-gradient(#457b9d, #1d3557);
+    border: solid 4px #a2d2ff;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+}
+
+.mama{
+    font-weight: bold;
+    color: #f1faee;
+    padding: 20px;
+    background: linear-gradient(#457b9d, #1d3557);
+    border: solid 4px #a2d2ff;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+}
+
+.yo{
+    font-weight: bold;
+    color: #f1faee;
+    padding: 20px;
+    background: linear-gradient(#457b9d, #1d3557);
+    border: solid 4px #a2d2ff;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+
 }
