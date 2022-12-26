@@ -106,3 +106,19 @@ button{
     position: relative;
     top: 250px;
 }
+
+.dice, 
+.dice2,
+.dice3,
+.dice4,
+.dice5,
+.dice6{
+    position: absolute;
+    height: 90px;
+    top: 170px;
+    left: 500px;
+}
+
+.hidden{
+    display: none;
+}
