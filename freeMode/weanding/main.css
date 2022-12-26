@@ -2,6 +2,19 @@
     margin: 0;
     padding: 0;
 }
-header{
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.content{
     background: red;
+    text-align: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
 }
