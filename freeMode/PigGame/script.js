@@ -5,26 +5,30 @@ const innerColor = document.querySelector('.innerColor');
 const innerColorTwo = document.querySelector('.innerColorTwo');
 let playerOne = document.querySelector('.pointsOne');
 let playerTwo = document.querySelector('.pointsTwo');
-const dice = document.querySelector('.dice');
-const dice2 = document.querySelector('.dice2');
-const dice3 = document.querySelector('.dice3');
-const dice4 = document.querySelector('.dice4');
-const dice5 = document.querySelector('.dice5');
-const dice6 = document.querySelector('.dice6');
+let score = document.querySelector('.ScoreOne');
+let array = [];
+let random = 
 
-roll.addEventListener('click', () =>{ 
-  
-  while (playerOne.textContent != '1'){
-    playerOne.textContent
-    if (playerOne.textContent == '1'){
-      innerColor.classList.add('hidden');
-      innerColorTwo.classList.remove('hidden');
-    }
-  
+
+roll.addEventListener('click', () => {
+  playerOne.textContent = Number(Math.round(Math.random() * 7) - 1); 
+  playerTwo.textContent = Number(Math.round(Math.random() * 7) - 1);
+  array.push(Number(playerOne.textContent));
+  let i = 0;
+
+  for (let x of array) {
+    i += Number(x);
+    score.textContent = i;
   }
-    
- 
 
+  if (playerOne.textContent <= 0){
+    playerOne.textContent = 0;
+    score.textContent = 0;
+    if (playerOne.textContent == 0){
+      innerColor.classList.add('hidden')
+      innerColorTwo.classList.remove('hidden')
   
+    }
+  }
 
 });
