@@ -7,28 +7,29 @@ let playerOne = document.querySelector('.pointsOne');
 let playerTwo = document.querySelector('.pointsTwo');
 let score = document.querySelector('.ScoreOne');
 let array = [];
-let random = 
+let i = 0;
 
+function playerOneF(){
+  playerOne.textContent = Math.round(Math.random() * 7) - 1;
+  if (playerOne.textContent <= 0){
+    playerOne.textContent = 1;
+    array.push(Number(playerOne.textContent));
+  }
+  else{
+    array.push(Number(playerOne.textContent));
+  }
+
+  i+= array[array.length - 1];
+  if (playerOne.textContent == 0){
+    score.textContent = 0;
+    i = 0;
+  }else{
+    score.textContent = i;
+
+  }
+}
 
 roll.addEventListener('click', () => {
-  playerOne.textContent = Number(Math.round(Math.random() * 7) - 1); 
-  playerTwo.textContent = Number(Math.round(Math.random() * 7) - 1);
-  array.push(Number(playerOne.textContent));
-  let i = 0;
-
-  for (let x of array) {
-    i += Number(x);
-    score.textContent = i;
-  }
-
-  if (playerOne.textContent <= 0){
-    playerOne.textContent = 0;
-    score.textContent = 0;
-    if (playerOne.textContent == 0){
-      innerColor.classList.add('hidden')
-      innerColorTwo.classList.remove('hidden')
-  
-    }
-  }
-
+  playerOneF();
 });
+
