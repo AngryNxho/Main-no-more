@@ -6,30 +6,46 @@ const innerColorTwo = document.querySelector('.innerColorTwo');
 let playerOne = document.querySelector('.pointsOne');
 let playerTwo = document.querySelector('.pointsTwo');
 let score = document.querySelector('.ScoreOne');
+const pointsFake = document.querySelector('.pointsFake1')
+const pointsFake2 = document.querySelector('.pointsFake2')
 let array = [];
+let array2 = [];
 let i = 0;
 
-function playerOneF(){
-  playerOne.textContent = Math.round(Math.random() * 7) - 1;
-  if (playerOne.textContent <= 0){
-    playerOne.textContent = 1;
-    array.push(Number(playerOne.textContent));
-  }
-  else{
-    array.push(Number(playerOne.textContent));
+function zeroCheck(number, numberTwo){
+  if (number == 0){
+    innerColor.classList.add('hidden');
+    innerColorTwo.classList.remove('hidden');
+  }else if (numberTwo == 0){
+    innerColor.classList.remove('hidden');
+    innerColorTwo.classList.add('hidden');
   }
 
-  i+= array[array.length - 1];
-  if (playerOne.textContent == 0){
-    score.textContent = 0;
-    i = 0;
-  }else{
-    score.textContent = i;
-
+  for (let x = 0; x < array.length; x++){
+    i += array[x];
   }
+  return i;
 }
 
 roll.addEventListener('click', () => {
-  playerOneF();
+  playerOne.textContent = Math.round(Math.random() * 7) - 1;
+  playerTwo.textContent = Math.round(Math.random() * 7) - 1;
+  if (playerOne.textContent < 0){
+    playerOne.textContent = 0;
+
+  }else if (playerOne.textContent > 0){
+    array.push(Number(playerOne.textContent));
+
+  }if (playerTwo.textContent < 0){
+    playerTwo.textContent = 0;
+  }else{
+    array2.push(Number(playerTwo.textContent));
+  }
+  zeroCheck(playerOne.textContent, playerTwo.textContent);
+
+  
+  
+  console.log(i);
+  
 });
 
