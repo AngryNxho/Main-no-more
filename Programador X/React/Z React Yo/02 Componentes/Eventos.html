@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+        <script type="text/babel">
+            //function Alertador(props){
+            //    const alerta = (e) => console.log('Alerta', e)
+            //    return <button onClick ={alerta}>Click!</button>
+            //}
+
+            class Alertador extends React.Component{
+                alerta = (e) => console.log('Alerta', e)
+                render(){
+                    return <button onClick ={this.alerta}>Click!</button>
+                }
+            }
+
+            ReactDOM.render(<Alertador/>, document.getElementById('root'));
+        </script>
+    </div>
+</body>
+</html>

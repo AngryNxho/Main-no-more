@@ -1,2 +1,5 @@
-
-// up arrow = 38, down arrow = 40, left arrow = 37, right arrow = 39
+let uno = document.querySelector('.uno');
+let boton = document.querySelector('.boton');
+boton.addEventListener('click', ()=>{
+    uno.textContent++;
+})
