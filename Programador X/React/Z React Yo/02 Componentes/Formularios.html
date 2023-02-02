@@ -9,39 +9,45 @@
     <div id="root">
         <script type="text/babel">
 
-            class Reloj extends React.Component {
-                constructor(props){
+            class Formulario extends React.Component {
+
+                constructor(props) {
                     super(props);
-                    this.state  = {fecha: new Date().toLocaleTimeString()};
+                    this.state = {nombre: ''}
                 }
 
-
-                componentDidMount() {
-                    this.timerID = setInterval(
-                        () => this.tick(), 1000
-                    );
+                onChange = evento => {
+                    this.setState({nombre: event.target.value})
                 }
 
-                componentWillUnomunt() {
-                    clearInterval(this.timerID);
-                }
-
-                tick() {
-                    this.setState(()=>({fecha: new Date().toLocaleTimeString()}))
+                onSubmit = evento => {
+                    alert(`Formulario envia: ${this.state.nombre}`)
                 }
 
                 render() {
                     return (
-                        <div>
-                            <h1>Que Hora es</h1>
-                            <h2>Son las {this.state.fecha}</h2>
-                        </div>
-                    )
+                        <form onSubmit={this.onSubmit}>
+                            <label>
+                                Nombre:
+                                <select
+                                    nombre = "nombre"
+                                    value = {this.state.nombre}
+                                    onChange = {this.onChange}>
+                                        <option value="Ignacio">Ignacio</option>
+                                        <option value="Lucas">Lucas</option>
+                                    
+
+                                </select>
+                            </label>
+                            <input type="submit" value ="Enviar"/>
+                            
+                        </form>
+                    );
                 }
             }
 
 
-            ReactDOM.render(<Reloj/>, document.getElementById('root'))
+            ReactDOM.render(<Formulario/>, document.getElementById('root'))
         </script>
     </div>
 </body>

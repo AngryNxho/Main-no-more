@@ -9,23 +9,16 @@
     <div id="root">
         <script type="text/babel">
 
-            function Condicionales(props) {
-                return props.Auto ? <h1>Tienes Auto</h1> : <h1>No tienes auto</h1>
-            }
+            function Contador(props) {
+                const [contar, setContar] = React.useState(0);
 
-            function Check(props) {
-                const [Auto, setAuto] = React.useState(false);
                 return (
-                    <div>
-                        <Condicionales Auto ={Auto}/>
-                        <button onClick={()=> setAuto(true)}>Click</button>
-                    </div>
+                    <div>Son las {new Date().toLocaleTimeString()}</div>
                 )
 
             }
 
-
-            ReactDOM.render(<Check/>, document.getElementById('root'))
+            ReactDOM.render(<Contador/>, document.getElementById('root'))
         </script>
     </div>
 </body>
