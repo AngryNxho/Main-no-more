@@ -4,20 +4,21 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
 </head>
 <body>
     <div id="root">
         <script type="text/babel">
-            
-            function Series(){
-                return <ul>{lista.map(serie => <li key={serie}>{serie}</li>)}</ul>
-            }
-            const lista = ['Silicon Valley', 'Mr Robot', 'Black Mirror'];
 
-            ReactDOM.render(<Series lista={lista}/>, document.getElementById('root'));
-            
+            function Series() {
+                const lista = ['Silicon Valley', 'Mr Robot', 'Black Mirror'];
+                return <ul>{lista.map(serie => <li>{serie}</li>)}</ul>
+            }
+
+            ReactDOM.render(<Series/>, document.getElementById('root'));
 
         </script>
     </div>
+    
 </body>
 </html>

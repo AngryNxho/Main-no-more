@@ -8,19 +8,21 @@
 <body>
     <div id="root">
         <script type="text/babel">
-            //function Alertador(props){
-            //    const alerta = (e) => console.log('Alerta', e)
-            //    return <button onClick ={alerta}>Click!</button>
+            
+            //function Alertador(props) {
+            //    const alerta = (e) => console.log('Alerta!', e)
+            //    return <button onClick={alerta}>Click</button>
             //}
 
-            class Alertador extends React.Component{
-                alerta = (e) => console.log('Alerta', e)
-                render(){
-                    return <button onClick ={this.alerta}>Click!</button>
+            class Alertador extends React.Component {
+                alerta = (e) => console.log('Alerta!', e)
+                render() {
+                    return <button onClick={this.alerta}>Click</button>
+        
                 }
             }
 
-            ReactDOM.render(<Alertador/>, document.getElementById('root'));
+            ReactDOM.render(<Alertador/>, document.getElementById('root'))
         </script>
     </div>
 </body>

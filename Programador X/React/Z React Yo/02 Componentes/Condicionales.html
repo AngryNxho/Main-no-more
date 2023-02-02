@@ -8,23 +8,46 @@
 <body>
     <div id="root">
         <script type="text/babel">
-            function Condicionales(props){
-                return props.autorizado ? <h1>Bienvenido</h1> : <h1>No autorizado</h1>
+
+            //function Condicionales(props) {
+            //   // if (props.autorizado){
+            //   //     return <h1>Bienvenido</h1>;
+            //   // }
+//
+            //    return props.autorizado ? <h1>Bienvenido</h1> : <h1>No autorizado</h1>;
+            //}
+//
+            //function App(props) {
+            //    const [autorizado, Autorizado] = React.useState(false);
+            //    
+            //    return (
+            //        <div>
+            //            <button onClick={()=> setAutorizado(true)}>Autorizar</button>
+            //            <Condicionales autorizado={autorizado}/>
+            //        </div>
+            //    )
+            //    
+            //}
+
+            function Condicionales(props) {
+                return props.auto ? <h1>Tienes Auto</h1> 
+                : <h1>No tienes auto</h1>;
             }
 
-            function App(props){
-                const [autorizado, setAutorizado] = React.useState(false);
+            function Check(props) {
+                const [Auto, setAuto] = React.useState(false);
+                
                 return (
                     <div>
-                        <button onClick = {()=> setAutorizado(true)}>Autorizar</button>
-                        <Condicionales autorizado = {autorizado}/>
+                        <button onClick={()=> setAuto(true)}>Comprar</button>
+                        <Condicionales auto={Auto}/>
                     </div>
-                );
+                )
+
             }
 
-            ReactDOM.render(<App/>, document.getElementById('root'));
-            
 
+            ReactDOM.render(<Check/>, document.getElementById('root'))
         </script>
     </div>
 </body>

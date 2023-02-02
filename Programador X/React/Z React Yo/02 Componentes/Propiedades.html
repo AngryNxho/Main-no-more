@@ -8,9 +8,11 @@
 <body>
     <div id="root">
         <script type="text/babel">
-            function Bienvenido(props){
-                return <h1>Bienvenido {props.nombre}!</h1>;
-            }; 
+
+          
+            function Bienvenido(props){ 
+                return <h1>Bienvenido! {props.nombre}</h1>
+            }
 
             function Login(props) {
                 return (
@@ -28,17 +30,18 @@
                 );
             }
 
-            function App(){
-                const nombre = "Jose";
+            function App(){ 
+                const nombre = 'Nacho'
                 return (
                     <div>
                         <Bienvenido nombre = {nombre}/>
                         <Login nombre = {nombre}/>
                     </div>
-                );
+                )
             }
 
-            ReactDOM.render(<App/>, document.getElementById('root'));
+
+            ReactDOM.render(<App/>, document.getElementById('root'))
         </script>
     </div>
 </body>

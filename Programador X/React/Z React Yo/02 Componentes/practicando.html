@@ -9,22 +9,23 @@
     <div id="root">
         <script type="text/babel">
 
-          
-            function Bienvenido(){ 
-                return <h1>Bienvenido</h1>
+            function Condicionales(props) {
+                return props.Auto ? <h1>Tienes Auto</h1> : <h1>No tienes auto</h1>
             }
 
-            function App(){ 
+            function Check(props) {
+                const [Auto, setAuto] = React.useState(false);
                 return (
                     <div>
-                        <Bienvenido/>
-                        <Bienvenido/>
+                        <Condicionales Auto ={Auto}/>
+                        <button onClick={()=> setAuto(true)}>Click</button>
                     </div>
                 )
+
             }
 
 
-            ReactDOM.render(<App/>, document.getElementById('root'))
+            ReactDOM.render(<Check/>, document.getElementById('root'))
         </script>
     </div>
 </body>
