@@ -1,3 +1,9 @@
+const btn = document.querySelector('.btn');
+const btnEnd = document.querySelector('.end');
+let hide = document.querySelectorAll('.hide');
+let list = document.querySelector('.list');
+
+
 let wordsArray = [
   'At Fault',
   'Tener la culpa',
@@ -327,30 +333,32 @@ function all() {
   
   for (x = 0; x < 10; x++) {
     let createBtns = document.createElement('button');
-    let a = document.createElement('br');
     let ulList = document.createElement('ul');
     list.appendChild(ulList);
     ulList.insertAdjacentHTML('afterbegin', emptyArray[x]);
     createBtns.textContent = 'Ready';
+
+    const rBtns= document.querySelectorAll('.readyBtns');  
     ulList.appendChild(createBtns)
+
+    for (let i = 0; i < emptyArray.length; i++) {
+      createBtns.addEventListener('click', ()=> {
+        createBtns.remove();
+        ulList.remove();
+      });
+    }
 
   }
 
-  return list
 }
 
 console.log(emptyArray);
-
-const btn = document.querySelector('.btn');
-const btnEnd = document.querySelector('.end');
-let hide = document.querySelectorAll('.hide');
-let list = document.querySelector('.list');
 
 btn.addEventListener('click', () => {
   all();
   list.classList.add('grid')
   console.log('start');
-
+  
 });
 
 btnEnd.addEventListener('click', () => {
@@ -361,6 +369,4 @@ btnEnd.addEventListener('click', () => {
   list.textContent = '';
 });
 
-emptyArray.forEach(()=>{
-  createBtns.remove( )
-})
+
