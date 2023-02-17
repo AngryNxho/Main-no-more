@@ -116,3 +116,11 @@ li{
     margin: 0 auto;
     display: inline;
 }
+
+.board{
+    position: fixed;
+    left: 500px;
+    top: 350px;
+    font-size: 30px;
+}
+

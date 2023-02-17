@@ -2,7 +2,8 @@ const btn = document.querySelector('.btn');
 const btnEnd = document.querySelector('.end');
 let hide = document.querySelectorAll('.hide');
 let list = document.querySelector('.list');
-
+let points = 0;
+let pointsGame = document.querySelector('.points');
 
 let wordsArray = [
   'At Fault',
@@ -345,6 +346,9 @@ function all() {
       createBtns.addEventListener('click', ()=> {
         createBtns.remove();
         ulList.remove();
+        console.log(points);
+        points += 1;
+        pointsGame.textContent = `Points: ${points}/10`
       });
     }
 
@@ -368,5 +372,4 @@ btnEnd.addEventListener('click', () => {
   console.log(list.textContent);
   list.textContent = '';
 });
-
 
