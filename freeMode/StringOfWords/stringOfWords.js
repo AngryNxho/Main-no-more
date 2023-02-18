@@ -7,7 +7,8 @@ let list = document.querySelector('.list');
 let points = 0;
 let pointsGame = document.querySelector('.points');
 let addDic = document.querySelector('.addDic');
-
+const languageEsp = document.querySelector('.esp');
+const languageEng = document.querySelector('.eng');
 let wordsArray = [
   'At Fault',
   'Tener la culpa',
@@ -95,234 +96,166 @@ let wordsArray = [
   'chiropractico',
   'claim',
   'reclamo, reclamacion',
-  
   'clinic',
+  'clinica',
   'code',
+  'codigo',
   'collections department',
+  'departamento de cobranzas',
   'collision',
+  'colision',
   'collision coverage',
+  'cobertura contra choques',
   'commercial',
+  'comercial',
   'compact',
+  'compacto',
   'comprehensive (insurance coverage)',
+  'cobertura contra todo riesgo',
   'confirm',
+  'confirmar',
+
   'consolidate',
+  'consolidar',
   'co-pay',
+  'copago',
   'corner/intersection',
+  'esquina',
   'cough',
+  'tos',
   'coverage',
+  'cobertura',
   'cracked',
+  'agrietado',
   'crashed',
+  'se estrello, colisionar',
   'credit(to)',
+  'acreditar',
   'credit card',
+  'tarjeta de credita',
   'credit limit',
+  'limite de credito',
   'credit report',
+  'informe de credito',
   'current',
+  'al dia',
   'damages',
+  'daños',
   'date of birth',
+  'fecha de nacimiento',
   'debris',
+  'escombros',
   'debts',
+  'deudas',
   'deductible',
+  'deducible',
   'delivery',
-  'DMV',
+  'parto',
+  'dmv',
   'departamento de vehiculos motorizados',
   'deploy',
+  'se desplego',
+  'diabetes',
   'diabetes',
   'diapers',
+  'pañales',
   'direct deposit',
+  'deposito directo',
   'disability',
+  'incapacidad',
   'disconnection',
+  'desconexion',
   'dispute',
+  'disputar',
   'down, weak',
+  'decaido',
   'drivable',
+  'conducible',
   'drive in facilities',
+  'centro de inspecciones',
   'drivers license',
+  'licencia de conducir',
   'earning (an income)',
+  'generacion de ingresos',
   'econmic crisis',
+  'crisis economica',
   'effective date',
+  'fecha de vigencia',
+  'elegible',
   'elegible',
   'emergency',
+  'urgencia, emergencia',
   'emergency lights, hazard lights',
+  'luces intermitentes',
   'emergency room',
+  'sala de emergencia/urgencia',
   'employer',
+  'empleador',
   'engine',
-  'ACCELERATOR', 
-  'ACELERADOR',
-'ACCELERATOR CABLE', 
-'CABLE DE ACELERADOR',
-'ACCELERATOR PEDAL',
- 'PEDAL DE ACELERADOR',
-'ADJUST', 
-'REGULAR',
-'ADJUST/SET/FIT', 
-'AJUSTAR',
-'ADJUSTING SCREW', 
-'TORNILLO DE AJUSTE',
-'ADJUSTMENT', 
-'REGLAJE/AJUSTE',
-'AIR', 
-'AIRE',
-'AIR BELLOW', 
-'COJIN DE AIRE',
-'AIR CYLINDER', 
-'CILINDRO DE AIRE',
-'AIR DRYER', 
-'DESHIDRADADOR',
-'AIR FILTER', 
-'FILTRO DE AIRE',
-'AIR HOSE', 
-'TUBO FLEXIBLE DE AIRE',
-'AIR PIPE', 
-'TUBO DE AIRE',
-'AIR PRESSURE GAUGE', 
-'MANOMETRO AIRE COMPROMIDO',
-'AIR RELEASE FILTER', 
-'FILTRO DE PURGA',
-'AIR SUSPENSION', 
-'SUSPENSION NEUMATICA',
-'AIR TANK', 
-'DEPOSITO DE AIRE COMPRIMIDO',
-'AIR VALVE', 
-'VALVULA DE CAMBIO',
-'ALTENATOR', 
-'DINAMO', 
-'ALTERNADOR',
-'ANCHOR PLATE', 
-'PLATE DEL INDUCIDO/ PLACA DEL INDUCIDO',
-'ANGULAR MEMBER', 
-'TRANSMISION ANGULAR',
-'ANTI-FREEZER', 
-'ANTICONGELANTE',
-'ANTI-JACKKNIVE', 
-'FRENO REMOLQUE',
-'ARLE HOUSING COVER', 
-'TAPA DEL CARTER DEL PUENTE',
-'ARMATURE', 
-'INDUCIDO',
-'AUXILIARY DROP ARM', 
-'BRAZO DE MANDO AUXILIAR',
-'AUXILIARY HEATER', 
-'CALEFACCION AUXILLIAR',
-'AUXILIARY SPRING', 
-'MUELLE AUXILIAR',
-'AXLE', 
-'EJE/ARBOL',
-'AXLE BEAM', 
-'VIGA EJA',
-'AXLE END', 
-'TROMPETA',
-'BACK LASH', 
-'JUEGO ENTRE DENTES',
-'BALL BEARING', 
-'COJINETE DE BOLAS/ROLINERAS',
-'BALL JOINT', 
-'JUNTA DE ROTULA DE DIRECCION',
-'BATTERY', 
-'BATERIA',
-'BATTERY BOX', 
-'CAJA DE BATERIA',
-'BEARING', 
-'RODIAMENTO/COJINETE/CHUMASERA',
-'BEARING HOUSING', 
-'CAJA DEL COJINETE/DELAS CHUMASERAS',
-'BEARING SHELL', 
-'COJINETE DE BIELA',
-'BEARING SHELL(main)', 
-'COQUILLA DEL COJINETE (principal)',
-'BELT TENSION/JOCKEY PULLEY', 
-'POLEA INTERMEDIA',
-'BIG END SHELL', 
-'COJINETA DE BIELA',
-'BLADE WHEEL', 
-'PALETAS/CUCHILLAS DE LAS RUEDA',
-'BODY', 
-'CARROCERIA',
-'BOLT', 
-'BULON/PERNO',
-'BOLT/SCREW', 
-'TORNITO',
-'TORNILLO',
-'BOOST CONTROL', 
-'AMPLIFICADOR DE AIRE/LIMIDADOR DE HUMO',
-'BOOSTER', 
-'AMPLIFICADOR/ SERVO',
-'BRACKET', 
-'SOPORTE',
-'BRAKE BACKING', 
-'SOPORTE/ZAPATA DE FRENO',
-'BRAKE BACKING PLATE', 
-'ZAPATA DEL FRENO/PLATO SOPPORTE DEL FRENO',
-'BRAKE BAND', 
-'CINTA DE FRENO',
-'BRAKE CALIPER',
- 'CARTER DEL FRENO',
-'BRAKE CHAMBER', 'CAMARA DE FRENO',
-'BRAKE FLUID', 'LIQUIDO DE FRENO',
- 'BRAKE PEDAL', 'PEDAL DE FRENO',
-'BRAKE PLATE', 'PLATO DE FRENO',
-'BRAKE SERVO', 'SERVO FRENO',
-'BRAKE SHOE', 'ZAPATA DE FRENO',
-'BRAKE SHOE', 'LINER, FORRE DE FRENO',
-'BRAKE CYLINDER',' CILINDRO DE FRENO',
-'BRAKE DRUM', 'TAMBOR DE FRENO',
-'BREATHER', 'RESPIRADERO',
-'BREATHER CAP', 'TAPA DEL RESPIRADERO',
-'BREATHER PIPE', 'TUBO DEL RESPIRADERO',
-'BRUSH HOLDER', 'PORTAESCOBILLAS',
-'BRUSH SPRING', 'MUELLE DE PORTAESCOBILLAS',
-'BUFFER STOP', 'CONTRATOPE',
-'BUMP STOP', 'TOPE DE SUSPENSION',
-'BUMPER', 'PARACHOQUES',
-'BUNK', 'BUJE/CAMA',
-'BUSHING', 'CASQUILLO DE BRONZE',
-'BUZZER', 'ZUMBADOR',
-'CALIBRATION', 'CALIBRACION',
-'CAM', 'LEVA',
-'CAM FOLLOWER', 'EMPUJADOR',
-'CAM FOLLOWER ROLLER', 'TALON DE EMPUJADOR',
-'CAM SHAFT', 'ARBOL DE LEVAS',
-'CAMSHAFT', 'ARBOL DE LEVAS',
-'CANVAS COVERING', 'LONA',
-'CARBON BRUSH', 'ESCOBILLA DE CARBON',
-'CASING', 'CARCASA',
-'CASTER', 'AVANCE DEL PONTE',
-'CENTERBOLT', 'PERNO CAPUCHINO',
-'CENTRE AXLE', 'ARBOL PRINCIPAL',
-'CENTRE BEARING', 'COJINATE INTERMEDIO',
-'CHASSIS FRAME', 'BASTIDOR',
-'CHECK VALVE', 'VALVULA DE RETENCION',
-'CHECK/INSPECT', 'CONTROLAR',
-'CIGAR LIGHTER', 'ENCEDOR DE CIGARROS',
-'CLAMP', 'MORDAZA',
-'CLUTCH', 'EMBRAGUE',
-'CLUTCH ASSY', 'GRUPE/ENSAMBLAJE DE PRESION',
-'CLUTCH COVER', 'MECANISMO',
-'CLUTCH CROSS', 'SHAFT, EJE MANDO DE EMBRAGUE',
-'CLUTCH DISC', 'DISCO DE EMBRAGUE',
-'CLUTCH DISK', 'DISCO',
-'CLUTCH FORK', 'HORQUILLA',
-'CLUTCH MASTER CYLINDER', 'BOMBA DE PRESION',
-'CLUTCH PEDAL, PEDAL DE EMBRAGUE',
-'CLUTCH RELEASE ASSISTANCE', 'SERVO EMBRAGUE',
-'CLUTCH RELEASE SLEEVE', 'CAMISA DE CORREDERA',
-'COIL', 'BOBINA',
-'COLD STARTING CABLE', 'CABLE DE ARRANQUE EN FRIO',
-'COMBINATION SWITCH', 
-'INTERRUPTOR DE COMBINATION',
-'COMPRESSION SPRING', 
-'MUELLE DE PRESION',
+  'motor',
+  'enrolled',
+  'inscrito',
+  'entrance',
+  'entrada',
+  'equipment',
+  'aparato, equipo',
+  'estimate',
+  'presupuesto',
+  'expedite',
+  'acelerar, expeditar',
+  'expire',
+  'vencer, caducar, expirar',
+  'factory installed',
+  'instalado de fabrica',
+  'fee',
+  'cuota',
+  'fender',
+  'guardafango',
+  'files',
+  'archivos',
+  'financial',
+  'financiero',
+  'flight',
+  'vuelo',
+  'follow up',
+  'seguimiento',
+  'food bank',
+  'banco de alimentos',
+  'food stamps',
+  'cupones de alimentos',
+  'forge',
+  'falsifico',
+  'fraud',
+  'fraude',
+  'full coverage',
+  'cobertura completa',
+  'generic',
+  'generico',
+  'gross income',
+  'ingreso bruto',
+  'gynecology',
+  'ginecologia',
+  'hall',
+  'granizo',
+  'hazard lights',
+  'luces intermitents',
+  'health plan/insurance',
+  'plan/seguro salud',
+  'heart',
+  'corazon',
+  'hit and run',
+  'chocar y huir'
 ];
 let emptyArray = [];
 let arrayCopy = [];
 
-wordsArray.forEach(a => {
-  arrayCopy.push(a.toLowerCase())
-})
+console.log(wordsArray.length);
 
 function newWords() {
   let i = 0;
   while (i < 10) {
     i++;
-    math = Math.trunc(Math.random() * 350)
+    math = Math.trunc(Math.random() * 180)
     emptyArray.push(wordsArray[math]);
   }
 
@@ -344,10 +277,9 @@ function all() {
     let createBtns = document.createElement('button');
     let ulList = document.createElement('ul');
     list.appendChild(ulList);
-    emptyArray[x].toLowerCase();
-    ulList.insertAdjacentHTML('afterbegin', emptyArray[x].toLowerCase());
+    emptyArray[x];
+    ulList.insertAdjacentHTML('afterbegin', emptyArray[x]);
     createBtns.textContent = 'Ready';
-
     ulList.appendChild(createBtns)
 
     for (let i = 0; i < emptyArray.length; i++) {
@@ -369,19 +301,54 @@ function all() {
 
 
 
-searchBtn.addEventListener('click', ()=>{
-  arrayCopy.forEach(m => {
+function searchWord(){
+//   if (inputBar.placeholder == 'appointment'){
+//     wordsArray.forEach(m => {
+//       if (m == inputBar.value){
+//         let createP = document.createElement('p');
+//         a = wordsArray.indexOf(`${inputBar.value}`) + 1;
+//         console.log(a);
+        
+//         createP.textContent = `${inputBar.value}`;
+//         createP.textContent = `${wordsArray.at(a)}`;
+//         addDic.appendChild(createP);
+//       }
+//     })
+//   }else if (inputBar.placeholder == 'cita'){
+//     wordsArray.forEach(m => {
+//       if (m == inputBar.value){
+//         let createP = document.createElement('p');
+//         a = wordsArray.indexOf(`${inputBar.value}`) - 1;
+//         console.log(a);
+        
+//         createP.textContent = `${inputBar.value}`;
+//         createP.textContent = `${wordsArray.at(a)}`;
+//         addDic.appendChild(createP);
+//       }
+//     })
+//   }
+// }
+
+
+ wordsArray.forEach(m => {
     if (m == inputBar.value){
       let createP = document.createElement('p');
-      a = arrayCopy.indexOf(`${inputBar.value}`) + 1;
+      if (inputBar.placeholder == 'appointment'){
+        a = wordsArray.indexOf(`${inputBar.value}`) + 1;
+      }else{
+        a = wordsArray.indexOf(`${inputBar.value}`) - 1;
+      }
       console.log(a);
       
       createP.textContent = `${inputBar.value}`;
-      createP.textContent = `${arrayCopy.at(a)}`;
+      createP.textContent = `${wordsArray.at(a)}`;
       addDic.appendChild(createP);
     }
-    
   })
+}
+
+searchBtn.addEventListener('click', ()=>{
+  searchWord()
 });
 
 
@@ -400,4 +367,12 @@ btnEnd.addEventListener('click', () => {
   points = 0
 });
 
+languageEng.addEventListener('click', () => {
+  inputBar.placeholder = 'appointment'
+  console.log(inputBar.placeholder);
+});
 
+languageEsp.addEventListener('click', () => {
+  inputBar.placeholder = 'cita'
+  console.log(inputBar.placeholder);
+});
