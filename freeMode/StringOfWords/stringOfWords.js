@@ -10,16 +10,16 @@ let addDic = document.querySelector('.addDic');
 const languageEsp = document.querySelector('.esp');
 const languageEng = document.querySelector('.eng');
 let wordsArray = [
-  'At Fault',
-  'Tener la culpa',
-  'Account Holder',
-  'Titular de la poliza',
-  'Account Specialis',
-  'Especialista en manejo de cuentas',
+  'at fault',
+  'tener la culpa',
+  'account Holder',
+  'titular de la poliza',
+  'account Specialis',
+  'especialista en manejo de cuentas',
   'activate',
   'activar',
   'active',
-  'en vigor, vigente',
+  'vigente',
   'adittional',
   'adicional',
   'adress',
@@ -38,15 +38,15 @@ let wordsArray = [
   'approved',
   'aprobado',
   'arrangement',
-  'arreglo, acuerdo',
-  'ATM (AUtomated teller Machine)',
+  'arreglo',
+  'ATM ',
   'cajero automatico',
   'authorized',
   'autorizado',
   'baby bottle',
   'biberon',
   'baby formula',
-  'leche infantil, formula para bebe',
+  'leche infantil',
   'back',
   'espalda',
   'beneficiary',
@@ -63,7 +63,7 @@ let wordsArray = [
   'lesion corporal',
   'body shop',
   'borrow',
-  'prestador, prestar',
+  'prestar',
   'braces',
   'frenillos',
   'branch',
@@ -71,17 +71,17 @@ let wordsArray = [
   'brand',
   'marca',
   'breathing',
-  'respiracion, respirar',
+  'respiracion',
   'brief',
-  'breve, corto',
+  'breve',
   'browser',
-  'explorador, navegador',
+  'explorador',
   'bumper',
   'parachoques',
   'bussiness days',
   'dias habiles',
-  'case (number)'
-  ,'numero de caso/expediente',
+  'case (number)',
+  'numero de caso/expediente',
   'case worker',
   'trabajador de caso',
   'characters',
@@ -95,7 +95,7 @@ let wordsArray = [
   'chiropractor',
   'chiropractico',
   'claim',
-  'reclamo, reclamacion',
+  'reclamo',
   'clinic',
   'clinica',
   'code',
@@ -114,7 +114,6 @@ let wordsArray = [
   'cobertura contra todo riesgo',
   'confirm',
   'confirmar',
-
   'consolidate',
   'consolidar',
   'co-pay',
@@ -128,7 +127,7 @@ let wordsArray = [
   'cracked',
   'agrietado',
   'crashed',
-  'se estrello, colisionar',
+  'se estrello',
   'credit(to)',
   'acreditar',
   'credit card',
@@ -167,7 +166,7 @@ let wordsArray = [
   'desconexion',
   'dispute',
   'disputar',
-  'down, weak',
+  'down',
   'decaido',
   'drivable',
   'conducible',
@@ -185,7 +184,7 @@ let wordsArray = [
   'elegible',
   'emergency',
   'urgencia, emergencia',
-  'emergency lights, hazard lights',
+  'hazard lights',
   'luces intermitentes',
   'emergency room',
   'sala de emergencia/urgencia',
@@ -198,13 +197,13 @@ let wordsArray = [
   'entrance',
   'entrada',
   'equipment',
-  'aparato, equipo',
+  'equipo',
   'estimate',
   'presupuesto',
   'expedite',
-  'acelerar, expeditar',
+  'expeditar',
   'expire',
-  'vencer, caducar, expirar',
+  'expirar',
   'factory installed',
   'instalado de fabrica',
   'fee',
@@ -244,7 +243,141 @@ let wordsArray = [
   'heart',
   'corazon',
   'hit and run',
-  'chocar y huir'
+  'chocar y huir',
+  'home care provider',
+  'proveedor de atencion domiciliaria',
+  'homeowner',
+  'propietario de una casa',
+  'homeowners insurance',
+  'seguro para viviendas',
+  'horn',
+  'bocina',
+  'identification',
+  'identificacion',
+  'income',
+  'entrada',
+  'injuries',
+  'lesiones',
+  'inspect',
+  'inspeccionar',
+  'installments',
+  'abonos',
+  'insufficient funds',
+  'insurance',
+  'insurance broker',
+  'insured',
+  'asegurado',
+  'interest',
+  'tasas de interes',
+  'internet',
+  'internet',
+  'invalid',
+  'investigation',
+  'issue',
+  'keep up',
+  'cumplir',
+  'layoff',
+  'despedir',
+  'layover',
+  'escala',
+  'legal guardian',
+  'tutor legal',
+  'legal resident',
+  'residente legal',
+  'liability insurance',
+  'license plates',
+  'loan',
+  'prestamo',
+  'location',
+  'ubicacion',
+  'login',
+  'ingresar',
+  'long term',
+  'a largo plazo',
+  'mail',
+  'correspondencia',
+  'make',
+  'marca',
+  'manager',
+  'gerente',
+  'manufacturers defect',
+  'market value',
+  'mechanic',
+  'mecanico',
+  'member',
+  'miembro',
+  'member id',
+  'numero de identificacion de miembro',
+  'membership',
+  'membresia',
+  'migraines',
+  'migrañas',
+  'minimum balance ',
+  'saldo minimo',
+  'model',
+  'modelo',
+  'modification',
+  'modificacion',
+  'mortgage',
+  'prestamo hipotecario',
+  'mothers maiden name',
+  'appellido de soltera de su madre',
+  'nape',
+  'nuca',
+  'navigation system',
+  'sistema de navegacion',
+  'neck',
+  'cuello',
+  'nephew',
+  'sobrino',
+  'neurologist',
+  'neurologo',
+  'niece',
+  'sobrina',
+  'no fault laws',
+  'leyes independientes de la culpabilidad',
+  'non payment',
+  'falta de pago',
+  'non perishable',
+  'alimentos no perecederos',
+  'non stop flight',
+  'sin escala',
+  'notice',
+  'notificacion',
+  'obstetrician',
+  'obbstetra',
+  'office visit',
+  'consulta',
+  'online',
+  'en linea',
+  'orthodontist',
+  'ortodoncista',
+  'overnight delivery',
+  'entrega de un dia para otro',
+  'painkiller',
+  'analgesicos',
+  'paperwork',
+  'paramedics',
+  'participates',
+  'participa',
+  'passes out',
+  'desmayar',
+  'passport',
+  'pasaporte',
+  'password',
+  'contraseña',
+  'paychecks',
+  'cheque de pago',
+  'payment arrangement',
+  'arreglo de pago',
+  'pay off',
+  'liquidar',
+  'payroll',
+  'nomina',
+  'paystubs',
+  'recibos de pago',
+
+
 ];
 let emptyArray = [];
 let arrayCopy = [];
@@ -255,10 +388,9 @@ function newWords() {
   let i = 0;
   while (i < 10) {
     i++;
-    math = Math.trunc(Math.random() * 180)
-    emptyArray.push(wordsArray[math]);
+    math = Math.trunc(Math.random() * 365);
+    emptyArray.push(wordsArray[math].toLowerCase());
   }
-
 }
 
 function all() {
@@ -272,85 +404,52 @@ function all() {
 
   let createList = document.createElement('li');
   list.appendChild(createList);
-  
+
   for (x = 0; x < 10; x++) {
     let createBtns = document.createElement('button');
     let ulList = document.createElement('ul');
     list.appendChild(ulList);
-    emptyArray[x];
+    // emptyArray[x];
     ulList.insertAdjacentHTML('afterbegin', emptyArray[x]);
     createBtns.textContent = 'Ready';
-    ulList.appendChild(createBtns)
+    ulList.appendChild(createBtns);
 
     for (let i = 0; i < emptyArray.length; i++) {
-      createBtns.addEventListener('click', ()=> {
+      createBtns.addEventListener('click', () => {
         createBtns.remove();
         ulList.remove();
         points += 1;
         console.log(points);
-        pointsGame.textContent = `Points: ${a = points/10}/10`;
-        if (a == 10){
+        pointsGame.textContent = `Points: ${(a = points / 10)}/10`;
+        if (a == 10) {
           pointsGame.textContent = 'Congratulations!! you got that 10/10';
-        } 
+        }
       });
     }
-
   }
-
 }
 
-
-
-function searchWord(){
-//   if (inputBar.placeholder == 'appointment'){
-//     wordsArray.forEach(m => {
-//       if (m == inputBar.value){
-//         let createP = document.createElement('p');
-//         a = wordsArray.indexOf(`${inputBar.value}`) + 1;
-//         console.log(a);
-        
-//         createP.textContent = `${inputBar.value}`;
-//         createP.textContent = `${wordsArray.at(a)}`;
-//         addDic.appendChild(createP);
-//       }
-//     })
-//   }else if (inputBar.placeholder == 'cita'){
-//     wordsArray.forEach(m => {
-//       if (m == inputBar.value){
-//         let createP = document.createElement('p');
-//         a = wordsArray.indexOf(`${inputBar.value}`) - 1;
-//         console.log(a);
-        
-//         createP.textContent = `${inputBar.value}`;
-//         createP.textContent = `${wordsArray.at(a)}`;
-//         addDic.appendChild(createP);
-//       }
-//     })
-//   }
-// }
-
-
- wordsArray.forEach(m => {
-    if (m == inputBar.value){
+function searchWord() {
+  wordsArray.forEach(m => {
+    if (m == inputBar.value) {
       let createP = document.createElement('p');
-      if (inputBar.placeholder == 'appointment'){
+      if (inputBar.placeholder == 'appointment') {
         a = wordsArray.indexOf(`${inputBar.value}`) + 1;
-      }else{
+      } else if (inputBar.placeholder == 'cita') {
         a = wordsArray.indexOf(`${inputBar.value}`) - 1;
       }
       console.log(a);
-      
+
       createP.textContent = `${inputBar.value}`;
       createP.textContent = `${wordsArray.at(a)}`;
       addDic.appendChild(createP);
     }
-  })
+  });
 }
 
-searchBtn.addEventListener('click', ()=>{
-  searchWord()
+searchBtn.addEventListener('click', () => {
+  searchWord();
 });
-
 
 btn.addEventListener('click', () => {
   all();
@@ -364,15 +463,17 @@ btnEnd.addEventListener('click', () => {
   console.log(list.textContent);
   list.textContent = '';
   pointsGame.textContent = `points: 0/10`;
-  points = 0
+  points = 0;
 });
 
 languageEng.addEventListener('click', () => {
-  inputBar.placeholder = 'appointment'
+  inputBar.placeholder = 'appointment';
+  inputBar.value = '';
   console.log(inputBar.placeholder);
 });
 
 languageEsp.addEventListener('click', () => {
-  inputBar.placeholder = 'cita'
+  inputBar.placeholder = 'cita';
+  inputBar.value = '';
   console.log(inputBar.placeholder);
 });
