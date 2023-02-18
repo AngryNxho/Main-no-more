@@ -4,6 +4,9 @@ const deleteAll = document.querySelector('.clear');
 let input = document.querySelector('input');
 let array = [];
 let backup = [];
+const browser = document.getElementById('browser');
+
+
 
 const startShopping = function () {
   const element = document.createElement('p');
@@ -32,6 +35,10 @@ const startShopping = function () {
   input.value = '';
   console.log(array, backup);
 };
+
+
+
+
 btn.addEventListener('click', startShopping);
 document.addEventListener('keydown', (e) => {
   if (e.key == 'Enter'){
@@ -39,5 +46,6 @@ document.addEventListener('keydown', (e) => {
     startShopping();
   };
 });
+
 
 

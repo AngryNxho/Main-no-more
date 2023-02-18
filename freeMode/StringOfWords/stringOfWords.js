@@ -1,9 +1,12 @@
 const btn = document.querySelector('.btn');
 const btnEnd = document.querySelector('.end');
+const searchBtn = document.querySelector('.srcBtn');
+let inputBar = document.querySelector('.browser');
 let hide = document.querySelectorAll('.hide');
 let list = document.querySelector('.list');
 let points = 0;
 let pointsGame = document.querySelector('.points');
+let addDic = document.querySelector('.addDic');
 
 let wordsArray = [
   'At Fault',
@@ -309,15 +312,20 @@ let wordsArray = [
 'MUELLE DE PRESION',
 ];
 let emptyArray = [];
+let arrayCopy = [];
 
-console.log(wordsArray.length);
+wordsArray.forEach(a => {
+  arrayCopy.push(a.toLowerCase())
+})
 
 function newWords() {
   let i = 0;
   while (i < 10) {
     i++;
-    emptyArray.push(wordsArray[Math.trunc(Math.random() * 243)]);
+    math = Math.trunc(Math.random() * 350)
+    emptyArray.push(wordsArray[math]);
   }
+
 }
 
 function all() {
@@ -336,19 +344,22 @@ function all() {
     let createBtns = document.createElement('button');
     let ulList = document.createElement('ul');
     list.appendChild(ulList);
-    ulList.insertAdjacentHTML('afterbegin', emptyArray[x]);
+    emptyArray[x].toLowerCase();
+    ulList.insertAdjacentHTML('afterbegin', emptyArray[x].toLowerCase());
     createBtns.textContent = 'Ready';
 
-    const rBtns= document.querySelectorAll('.readyBtns');  
     ulList.appendChild(createBtns)
 
     for (let i = 0; i < emptyArray.length; i++) {
       createBtns.addEventListener('click', ()=> {
         createBtns.remove();
         ulList.remove();
-        console.log(points);
         points += 1;
-        pointsGame.textContent = `Points: ${points}/10`
+        console.log(points);
+        pointsGame.textContent = `Points: ${a = points/10}/10`;
+        if (a == 10){
+          pointsGame.textContent = 'Congratulations!! you got that 10/10';
+        } 
       });
     }
 
@@ -356,20 +367,37 @@ function all() {
 
 }
 
-console.log(emptyArray);
+
+
+searchBtn.addEventListener('click', ()=>{
+  arrayCopy.forEach(m => {
+    if (m == inputBar.value){
+      let createP = document.createElement('p');
+      a = arrayCopy.indexOf(`${inputBar.value}`) + 1;
+      console.log(a);
+      
+      createP.textContent = `${inputBar.value}`;
+      createP.textContent = `${arrayCopy.at(a)}`;
+      addDic.appendChild(createP);
+    }
+    
+  })
+});
+
 
 btn.addEventListener('click', () => {
   all();
-  list.classList.add('grid')
+  list.classList.add('grid');
   console.log('start');
-  
 });
 
 btnEnd.addEventListener('click', () => {
   emptyArray = [];
-
   console.log(emptyArray);
   console.log(list.textContent);
   list.textContent = '';
+  pointsGame.textContent = `points: 0/10`;
+  points = 0
 });
+
 
