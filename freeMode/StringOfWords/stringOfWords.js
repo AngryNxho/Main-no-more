@@ -431,7 +431,7 @@ function all() {
 
 function searchWord() {
   wordsArray.forEach(m => {
-    if (m == inputBar.value) {
+    if (m == inputBar.value.toLowerCase()) {
       let createP = document.createElement('p');
       if (inputBar.placeholder == 'appointment') {
         a = wordsArray.indexOf(`${inputBar.value}`) + 1;
@@ -439,10 +439,11 @@ function searchWord() {
         a = wordsArray.indexOf(`${inputBar.value}`) - 1;
       }
       console.log(a);
-
+    
       createP.textContent = `${inputBar.value}`;
       createP.textContent = `${wordsArray.at(a)}`;
       addDic.appendChild(createP);
+    
     }
   });
 }
