@@ -1,4 +1,11 @@
-let lista = ['1','2','4']
+import React from 'react';
+import ReactDOM  from 'react-dom/client';
 
-console.log(lista.includes(String(3)));
-    
+
+function App(){
+    return (
+        <div>
+            <h1>Hello World!!</h1>
+        </div>
+    )
+}
