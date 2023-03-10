@@ -1,0 +1,14 @@
+html{
+    min-height: 100%;
+}
+
+body{
+    position: fixed;
+    left: 35%;
+    top: 20%;
+    background: linear-gradient(to top left, red, blue);
+}
+
+input[type="text"]{
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+import { useState } from "react";
+
+function App(){
+    
+    function getRandomAnimal(){
+        const animals = ['bird', 'cat', 'cow', 'dog', 'gator', 'horse'];
+        
+        return animals[Math.floor(Math.random() * animals.length)]
+    }
+
+    console.log(getRandomAnimal());
+
+    const [count, setCount] = useState(0);
+    
+    const handleClick= () => {
+        setCount(count + 1);
+    };
+
+    return (
+        <div>
+            <button 
+            onClick={handleClick}>Add Animal</button>
+            <div>Number of animals: {count}</div>
+        </div>
+    )
+}
+
+export default App;
