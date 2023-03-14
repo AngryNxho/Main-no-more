@@ -2,7 +2,6 @@ function upperCase(sentence){
 
     let a = '';
     let array = [sentence];
-    console.log(array);
     for (x of arguments){
         a += x
     }
@@ -13,7 +12,7 @@ function upperCase(sentence){
     for (x = 1; x < array[0].length; x++){
 
         if (array[0][x] == ' '){
-            finalArr += ' ' + (array[0][++x].toUpperCase())
+            finalArr += ` ${(array[0][++x].toUpperCase())}`;
         }
         else{
             finalArr += array[0][x]
