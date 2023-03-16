@@ -10,7 +10,6 @@ function upperCase(sentence){
     let finalArr = '';
 
     for (x = 1; x < array[0].length; x++){
-
         if (array[0][x] == ' '){
             finalArr += ` ${(array[0][++x].toUpperCase())}`;
         }
@@ -18,11 +17,8 @@ function upperCase(sentence){
             finalArr += array[0][x]
         }
     }
-
-    
     return array[0][0].toUpperCase() + finalArr
 
 }
 
-
-console.log(upperCase('la verdad es que comprendo porque game of thrones tiene menos puntaje que breaking bad, sin embargo pienso que aun asi, got es mejor'));
+console.log(upperCase('hola que hace'));
