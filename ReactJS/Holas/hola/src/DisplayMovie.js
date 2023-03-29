@@ -1,15 +1,13 @@
 import { useState } from "react";
 
+
 function DisplayMovie({title, date}){
 
-    const [counter, setCounter] = useState(0);
 
-    
     return (
-        <div>
-            <button >Click</button>
-            <p> The movie is: {title}</p>
-            <p> The release date was on: {date}</p>
+        <div >
+            <h1>The Movie is: {title}</h1>
+            <h2>The release year is: {date}</h2>
         </div>
     )
 }

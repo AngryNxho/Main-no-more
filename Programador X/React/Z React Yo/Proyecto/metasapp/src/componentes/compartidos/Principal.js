@@ -1,16 +1,18 @@
-
 function Principal({children}) {
-  return (
-    <>
+    return (
+      <>
         <sidenav>
             <a href="/lista">Lista</a>
             <a href="/crear">Crear</a>
         </sidenav>
+
         <main>
             {children}
         </main>
-    </>
-  );
-}
-
-export default Principal;
+      </>
+    );
+  }
+  
+  export default Principal;
+  
+  

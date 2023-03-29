@@ -1,3 +1,9 @@
-a = ['WE THE BEST MUSIC']
+function reverseArr(arg){
+    const string = [];
 
-console.log(a.reverse( ));
+    for (let x = 0;)
+}
+
+
+
+console.log(reverseArr('Hola'));
