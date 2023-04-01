@@ -1,11 +1,9 @@
-function DisplayMessage({name}){
-
-    return (
+function DisplayMessage({name}) {
+    return ( 
         <div>
-            <h1>Hello {name}</h1>
+            <h1>Hello There {name}!!</h1>
         </div>
-    )
+     );
 }
-
 
 export default DisplayMessage;
