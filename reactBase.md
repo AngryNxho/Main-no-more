@@ -65,3 +65,6 @@ function App() {
 }
 
 export default App;
+
+
+onChange = a Use types in a text input

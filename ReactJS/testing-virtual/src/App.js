@@ -1,20 +1,20 @@
 import DisplayMessage from "./DisplayMessage";
 import {useState} from 'react';
 
-function App() {
+function App({newName}) {
 
-    const secondName = 'Lucas';
-    const initialName = 'Ignacio';
-    const [value, setValue] = useState(initialName);
+    const third = ['Lucas'];
+    const names = ['Ignacio'];
+    const [value, setValue] = useState(names);
 
     const handleClick = () => {
-        setValue(prevName => [prevName, secondName])
+        setValue(names.push(third))
     }
 
     return (
         <div>
-            <DisplayMessage name={initialName}/>
-            {value}
+            <DisplayMessage name={names}/>
+            <br />
             <button onClick={handleClick}>Click</button>
         </div>
     );
