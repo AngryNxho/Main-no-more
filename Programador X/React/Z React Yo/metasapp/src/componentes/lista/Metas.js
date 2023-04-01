@@ -1,6 +1,8 @@
+import estilos from './Meta.module.css';
+
 function Meta() {
     return (
-        <div>
+        <div className={estilos.meta}>
             <div>Icono</div>
             <div>
                 <p>1 <sub>/ semana</sub></p>
