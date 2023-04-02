@@ -7,20 +7,16 @@ import heart from './svg/heart.svg';
 import horse from './svg/horse.svg';
 
 const svgMap = {
-    bird,
-    cat,
-    cow,
-    dog,
-    gator,
-    horse,
+  bird,
+  cat,
+  cow,
+  dog,
+  gator,
+  horse,
 };
 
-function DisplayAnimals({type}) {
-    return (
-        <div>
-            {type}
-        </div>
-    );
+function DisplayAnimals({ type }) {
+  return <div>{type}</div>;
 }
 
 export default DisplayAnimals;
