@@ -1,4 +1,4 @@
-const reverseString = (arg) => {
+function reverseString(arg) {
     const originalString = arg;
 
     let convertedString = '';
