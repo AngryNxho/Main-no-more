@@ -7,8 +7,7 @@ const reverseString = (arg) => {
         convertedString += (originalString[originalString.length - x]);
     };
 
-    console.log(convertedString);
-
+    return convertedString;
 };
 
-reverseString('AngryNxho se llama Ignacio'); 
+console.log(reverseString('AngryNxho se llama Ignacio')); 
