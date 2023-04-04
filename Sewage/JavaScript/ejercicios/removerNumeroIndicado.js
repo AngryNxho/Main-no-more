@@ -19,5 +19,5 @@ function Lista(numeros, indice){
 
     return `Lista 2: ${lista2}`;
 }
-console.log(Lista([1,2,3,4],1));
+console.log(Lista([1,2,3,4],4));
 
