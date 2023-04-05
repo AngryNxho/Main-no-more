@@ -1,23 +1,20 @@
 import DisplayMessage from "./DisplayMessage";
 import {useState} from 'react';
 
-function App({newName}) {
+function App() {
 
-    const third = ['Lucas'];
-    const names = ['Ignacio'];
-    const [value, setValue] = useState(names);
+    const [value, setValue] = useState(''); 
 
-    const handleClick = () => {
-        setValue(names.push(third))
-    }
+    const handleClick = (e) => {
+        setValue('Ignacio');
+    };
 
     return (
         <div>
-            <DisplayMessage name={names}/>
-            <br />
-            <button onClick={handleClick}>Click</button>
+            <input type="text"/>
+            <button onClick={()=>{alert(value)}}>Click</button>
         </div>
-    );
+    )
 }
 
 export default App;
