@@ -1,22 +1,22 @@
-const twoSum = (nums, target) => {
-  let index = [];
-  let i = 0;
-  let x = 0;
+
+function twoSum(nums, target){
 
 
-  while (i < nums.length){
-    console.log(i);
-    i++
+  let index = [];  
+
+  for ([x, i] = [0, 1]; i <= nums.length; i++){
     if (nums[x] + nums[i] == target){
       index.push(x, i);
-    };
-  };
+    }else if (nums[x] + nums[i] == target && i == nums.length){
+      console.log(2);
+    }
+  }
+    return index;
+}
 
-  console.log(index);
-};
+console.log(twoSum([2,7,11,15], 9));
+console.log(twoSum([3,2,3], 6));
+console.log(twoSum([3,3], 6));
+console.log(twoSum([3,2,4], 6));
 
-// twoSum([2, 7, 11, 15], (target = 9)); // [0,1] SI
-// twoSum([3, 2, 4], target = 6);// [1,2] Si
-// twoSum([3,3], target = 6);//[0,1] Si                                                                                                                                                                                     
-twoSum([3], target = 6);//[0,1] No
-// twoSum([2, 7, 11, 15], target = 17);//[0,3] Si
+
