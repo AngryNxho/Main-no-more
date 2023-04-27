@@ -2,12 +2,24 @@ function twoSum(nums, target){
 
   let index = [];  
 
+
+  for ([h, j, k] = [0, 1, 0]; j < nums.length; j++){
+    if (nums[h] + nums[j] == target){
+      index.push(h, j)
+    }else{
+      k = j - 1;
+      if (nums[k] + nums[j] == target){
+        index.push(k, j)
+      };
+    }
+  }
+
   for (let x in nums){
     for (let i = 0; i < nums.length; i++){
       if (nums[i] + nums[x] == target && nums[i] != nums[x]){
         // console.log(`${nums[x]} + ${nums[i]} = ${nums[i] + nums[x]}`);
         if (index.length <= 1){
-          index.push(x, i)
+          index.push(Number(x), Number(i));
         }
       }
     }
@@ -23,3 +35,4 @@ console.log(twoSum([3,2,4], 6));// 1, 2
 console.log(twoSum([-1, -2, -3, -4, -5], -8));//2, 4 \\ 6
 console.log(twoSum([1,1,1,1,1,4,1,1,1,1,1,7,1,1,1,1,1], 11)); //5, 11
 console.log(twoSum([6,5,7,8,9,3], 10));// 2, 5 \\ 7
+console.log(twoSum([2,5,5,11], 10));
