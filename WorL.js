@@ -1,13 +1,27 @@
-const Description = {
-    name:"AngryNxho",
-    age: 21,
-    aboutMe:"Not much really, just a guy who likes to spend time on the computer, and play some games",
-    goal:"Find something that gives some purpose to my life",
-    Display(){
-        return (`-Hello My name is ${Description.name}
-        \n-I am a ${Description.age} yo
-        \n-${Description.aboutMe}
-        \n-Rn my goal is to ${Description.goal}`);
-    }
-};
-console.log(Description.Display());
+// if (nums[y] + nums[i] == target){
+  // index.push(y, i);
+// 
+//  }else if (nums[x] + nums[i] != target){
+  //  x = (i - 1)
+  //  if (nums[x] + nums[i] == target){
+    //  index.push(x, i);
+  //  }
+//  }else if (index.length != target){
+  //  index.push(x, i);
+//  }
+// 
+if (nums[x] + nums[i] == target){
+  index.push(x, i);
+    x++;
+  }else if (nums[x] + nums[i] != target){
+  x = i - 1;
+  if (nums[x] + nums[i] == target){
+      index.push(x, i);
+  }
+}
+console.log(twoSum([2,7,11,15], 9)) // 0, 1
+console.log(twoSum([3,2,3], 6));// 0, 2
+console.log(twoSum([3,3], 6));// 0, 1
+console.log(twoSum([3,2,4], 6));// 1, 2
+console.log(twoSum([-1, -2, -3, -4, -5], -8));//2, 4
+console.log(twoSum([6,5,7,8,9,3], 10));// 2, 5
