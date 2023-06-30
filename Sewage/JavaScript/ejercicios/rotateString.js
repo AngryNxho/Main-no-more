@@ -19,4 +19,4 @@ function reverseString(stringg){
 
 }
 
-console.log(reverseString('Hola Mundo'));
+console.log(reverseString("hola mundo"));
