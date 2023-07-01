@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="es_CL">
+<head>
+	<meta charset="UTF-8"/>
+    <title>Nombre Rut y Firma - Rutificador</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="pragma" content="no-cache"/>
+	<meta name="description" content="Encuentra a Chilenos y Chilenas por RUT y Nombre"/>
+	<meta name="keywords" content="rutificador, chile, buscar personas, direccion, casa, domicilio"/>
+
+	<!-- Open Graph Protocol -->	
+	<meta property="og:image" content="https://www.nombrerutyfirma.com/ogmeta.jpg"/>
+
+	<!-- Std Legacy Icons -->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	
+	<!-- Apple Touch Icons -->
+	<link rel="apple-touch-icon" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.nombrerutyfirma.com/assets/icons/apple-touch-icon-180x180.png">
+	
+	<!-- Android and Other Icons -->
+	<link rel="icon" type="image/png" sizes="192x192"  href="https://www.nombrerutyfirma.com/assets/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.nombrerutyfirma.com/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://www.nombrerutyfirma.com/assets/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.nombrerutyfirma.com/assets/icons/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	
+	<!-- Desktop macOS with Touchbar and Legacy Windows Dashboard -->
+	<link rel="mask-icon" href="https://www.nombrerutyfirma.com/assets/icons/safari-pinned-tab.svg" color="#1e62a3">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="https://www.nombrerutyfirma.com/assets/icons/mstile-150x150.png">
+	
+	<!-- Theme Color -->
+	<meta name="theme-color" content="#1e62a3">
+
+	<!-- Scripts extCDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+	
+	<!-- CSS extCDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="" crossorigin="anonymous">
+	
+	<!-- Own CSS-->
+	<link rel="stylesheet" href="/static/stylenew.css">
+	
+	<!-- Own JS Toolbox-->
+	<script src="/static/rutv.js"></script>
+	
+	<!-- RUT live formatting -->
+	<script type="text/javascript">
+		$(function(){
+		$("form#formato-live input").rut({formatOn: 'keyup'});
+		});
+	</script>
+	
+	<!-- Ads Init -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9788022456231162"crossorigin="anonymous"></script>	
+	
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141302579-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-141302579-1');
+	</script>
+</head>
+<body>
+	<!-- Main container -->	
+	<div class="mastertable">
+		<div class="mastertable-inner text-center"> 
+			<h1 class="no-margin-top h1">
+			<img src="/logo_png9.png" alt="Buscar por RUT o Nombre, rutificador." width="311" height="97" style="margin-bottom: 40px">
+			</h1>
+				<div id="Tabs" role="tabpanel">
+					<ul class="nav nav-tabs justify-content-center" role="tablist">
+						<li class="nav-item"><a class="nav-link active" href="#apellido" aria-controls="apellido" role="tab" data-toggle="tab">Nombre Apellido</a></li>
+						<li class="nav-item"><a class="nav-link" href="#rut" aria-controls="rut" role="tab" data-toggle="tab">RUT</a></li>
+						<li class="nav-item"><a class="nav-link" href="https://www.boletaofactura.com/" aria-controls="boletaofactura" role="tab" data-toggle=""><img style="height: 20px; width: 20px; border: 0;" src="https://www.nombrerutyfirma.com/back2bof.png"/></a></li>
+						<li class="nav-item"><a class="nav-link" href="https://www.volanteomaleta.com/" aria-controls="volanteomaleta" role="tab" data-toggle=""><img style="height: 20px; width: 20px; border: 0;" src="https://www.nombrerutyfirma.com/back2vom.png"/></a></li>
+					</ul>
+					<div class="tab-content" style="padding-top: 20px">
+						<div role="tabpanel" class="tab-pane active" id="apellido">
+							<form id="valid" role="form" class="search" method="post" action="nombre">
+								<div class="input-group stylish-input-group input-append">
+									<input type="text" class="form-control" placeholder="Buscar por Nombre y Apellido de una persona" name="term">
+									<span class="input-group-addon">
+									<button type="submit" value="Buscar">
+										<i class="fas fa-search white"></i>
+									</button>  
+									</span>
+								</div>
+								<h6>Puedes buscar sin importar el orden de sus nombres o apellidos.</h6>
+	        				</form>    
+						</div>
+						<div role="tabpanel" class="tab-pane" id="rut">
+							<form id="formato-live" novalidate="novalidate" role="form" class="search" method="post" action="rut">
+								<div class="input-group stylish-input-group input-append">
+									<input type="text, number" input-mode="numeric" pattern="[0-9]*" placeholder="Buscar por RUT" name="term" class="form-control" maxlength="12">
+									<span class="input-group-addon">
+									<button type="submit" value="Buscar">
+										<i class="fas fa-search white"></i>
+									</button>  
+									</span>									
+								</div>  
+								<h6>Si <u>no</u> sabes el digito verificador (o termina en -K), reemplázalo por un cero (0)</h6>
+							</form>
+						</div>
+					</div>
+				</div>
+			<!-- Ads -->
+			<div align="center">
+				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9788022456231162" data-ad-slot="1994751952" data-ad-format="auto" data-full-width-responsive="true"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>	
+			<p></p>
+		</div>
+	</div>
+	<div class="article-list">
+		<div class="container">
+			<div class="intro"></div>
+			<div class="row articles">
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/maria-teresa-ruiz.html"><img class="rounded img-fluid" src="/assets/img/front-img-maria-teresa-ruiz.jpg"></a>
+					<h4 class="name"><a href="/articulos/maria-teresa-ruiz.html"><strong>María Teresa Ruíz</strong></a><br></h4>
+					<p class="description text-justify">Ha descubierto una supernova en el momento de explotar, dos nebulosas planetarias en el halo de la vía láctea y descubrió la primera enana café que se conoce (objetos estelares que no poseen luz propia) en las proximidades del sistema solar llamada Kelu, que significa rojo en mapudungún.<br></p>
+				</div>
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/gabriela-mistral.html"><img class="rounded img-fluid" src="/assets/img/front-img-gabriela-mistral.jpg"></a>
+					<h4 class="name"><a href="/articulos/gabriela-mistral.html"><strong>Gabriela Mistral</strong></a><br></h4>
+					<p class="description text-justify">Es desde los años 30 que el círculo intelectual del país e incluso el presidente Pedro Aguirre Cerda, promocionó la obra de Mistral para que fuera merecedora del Nobel. Finalmente el 10 de diciembre de 1945, recibió el premio Nobel de Literatura. Y años después recibió el Premio Nacional de Literatura, con su libro "Lagar".<br></p>
+				</div>
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/isabel-allende.html"><img class="rounded img-fluid" src="/assets/img/front-img-isabel-allende.jpg"></a>
+					<h4 class="name"><a href="/articulos/isabel-allende.html"><strong>Isabel Allende</strong></a><br></h4>
+					<p class="description text-justify">Nació en Perú el 2 de agosto de 1942 para después a los tres años mudarse a Santiago de Chile lugar en donde viviría intermitentemente gracias al trabajo de su padrastro, el diplomático Ramón Huidobro.<br></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="article-list">
+		<div class="container">
+			<div class="intro"></div>
+			<div class="row articles">
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/pedro-aguirre-cerda.html"><img class="rounded img-fluid" src="/assets/img/front-img-pedro-aguirre-cerda.jpg"></a>
+					<h4 class="name"><a href="/articulos/pedro-aguirre-cerda.html"><strong>Pedro Aguirre Cerda</strong></a><br></h4>
+					<p class="description text-justify">Antes de llegar a la presidencia estudió en el Instituto Pedagógico de la Universidad de Chile y en 1900 se tituló de profesor de castellano y filosofía, luego en 1904 se tituló de abogado en la misma universidad. Cuando cumplió 27 años ingresó a la masonería para luego militar por el Partido Radical.<br></p>
+				</div>
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/paula-daza.html"><img class="rounded img-fluid" src="/assets/img/front-img-paula-daza.jpg"></a>
+					<h4 class="name"><a href="/articulos/paula-daza.html"><strong>Paula Daza</strong></a><br></h4>
+					<p class="description text-justify">Egresó en 1984 como médico cirujano de la Universidad de Chile, donde posteriormente obtuvo su certificación en la especialidad de pediatría.<br></p>
+				</div>
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/marcela-paz.html"><img class="rounded img-fluid" src="/assets/img/front-img-marcela-paz.jpg"></a>
+					<h4 class="name"><a href="/articulos/marcela-paz.html"><strong>Marcela Paz</strong></a><br></h4>
+					<p class="description text-justify">Comenzó escribiendo artículos en distintas revistas y diarios, para después en 1933 publicar su primer libro "Tiempo, papel y lápiz" el cuál recibió buenas críticas y escribió un segundo libro "Soy Colorina", no fue hasta 1947 cuando publicó el primer libro de su famoso personaje "Papelucho" por el cuál ganó prestigiosos premios de literatura y creación.<br></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="article-list">
+		<div class="container">
+			<div class="intro"></div>
+			<div class="row articles">
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/violeta-parra.html"><img class="rounded img-fluid" src="/assets/img/front-img-violeta-parra.jpg"></a>
+				<h4 class="name"><a href="/articulos/violeta-parra.html"><strong>Violeta Parra</strong></a><br></h4>
+				<p class="description text-justify">Violeta Del Carmen Parra Sandoval, mejor conocida como Violeta Parra fue una famosa folklorista y compositora chilena, madre de cuatro hijos y conocida por canciones como "Gracias a la vida", "Run Run" y "Volver a los diecisiete".<br></p>
+				</div>
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/felipe-camiroaga.html"><img class="rounded img-fluid" src="/assets/img/front-img-felipe-camiroaga.jpg"></a>
+					<h4 class="name"><a href="/articulos/felipe-camiroaga.html"><strong>Felipe Camiroaga</strong></a><br></h4>
+					<p class="description text-justify">En su trayectoria televisiva también incursionó en el mundo de la actuación con destacadas participaciones en teleseries como "Jaque Mate" y "Rojo y Miel".<br></p>
+				</div>
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/jorge-alessandri.html"><img class="rounded img-fluid" src="/assets/img/front-img-jorge-alessandri.jpg"></a>
+					<h4 class="name"><a href="/articulos/jorge-alessandri.html"><strong>Jorge Alessandri</strong></a><br></h4>
+					<p class="description text-justify">Alessandri se presentó en las elecciones presidenciales de 1958, las cuales ganó. Desde lo económico impulsó ideas liberales tales como abrir a las importaciones, sin embargo decidió mantener un tipo de cambio fijo durante gran parte de su mandato. <br></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="article-list">
+		<div class="container">
+			<div class="row articles">
+				<div class="col-md-4 col-sm-6 item"><a href="/articulos/mario-marcel.html"><img class="rounded img-fluid" src="/assets/img/front-img-mario-marcel.jpg"></a>
+					<h4 class="name"><a href="/articulos/mario-marcel.html"><strong>Mario Marcel</strong></a><br></h4>
+					<p class="description text-justify">Sus excelentes antecedentes como profesional y evidentes resultados dentro de los puestos en los cuales tuvo lugar permitieron que en 2014 llegar al Banco Mundial como Director de Practica Global de Buen Gobierno.<br></p>
+				</div>
+				<div class="col-md-4">
+					<h4>Más artículos</h4>
+					<ul class="list-group">
+						<li class="list-group-item"><span><a href="/articulos/eloisa-diaz.html">Eloísa Díaz</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/gladys-marin.html">Gladys Marín</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/jorge-gonzalez.html">Jorge Gonález</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/enrique-paris.html">Enrique Paris</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/mary-rose-mac-gill.html">Mary Rose Mac-Gill</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/carolina-fadic.html">Carolina Fadic</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/victor-jara.html">Victor Jara</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/cecilia-bolocco.html">Cecilia Bolocco</a></span></li>						
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<ul class="list-group">
+						<li class="list-group-item" style="margin-top: 57px;"><span><a href="/articulos/mon-laferte.html">Mon Laferte</a><br></span></li>
+						<li class="list-group-item"><span><a href="/articulos/sebastian-pinera.html">Sebastián Piñera</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/maria-ines-barria.html">María Inés Barría</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/francisco-coloane.html">Francisco Coloane</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/salvador-allende.html">Salvador Allende</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/michelle-bachelet.html">Michelle Bachelet</a></span></li>
+						<li class="list-group-item"><span><a href="/articulos/fernando-castillo-velasco.html">Fernando Castillo Velasco</a></span></li>				
+						<li class="list-group-item"><span><a href="/articulos/ivan-zamorano.html">Iván Zamorano</a></span></li>
+					</ul>
+				</div>				
+			</div>
+		</div>
+	</div>
+	<p></p>	
+    <div align="center" class="footer-basic">
+        <footer>
+            <p class="copyright"><a href="/articulos/privacidad.html">Política de Privacidad</a></p>
+        </footer>
+    </div>
+<script>(function(){var js = "window['__CF$cv$params']={r:'7df9ab8e7fca1eb7',m:'ez6f0ETK2VcAVm7JBR1vkVTVgb9XOM.PbKuXd8Z_giw-1688162301-0-AXbZXxhJjvE42Z5zZMO1x8oJ5UTE0WqgIZhB/FNs+YJo'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>
