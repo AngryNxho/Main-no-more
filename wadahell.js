@@ -42,4 +42,4 @@ function logistic(capacity, weight, user){
 }                                           
 
 
-console.log(logistic(2500, 500, 5));
+console.log(logistic(510, 210, 2));
