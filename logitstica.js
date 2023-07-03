@@ -30,14 +30,9 @@ function logistic(capacity, weight, user){
 
     let total = (sumA) + (sumB);
     
-    if (total <= capacity){
-        return `Cajas Grandes: ${quantityBig} - ${sumA / quantityBig}(Kg) que por pedido del usuario seran divididas en ${Math.round((sumA/quantityBig)/userKg)}(Kg) c/u
-Cajas Medianas: ${quantitySmall} - ${sumB / quantitySmall}(Kg) que por pedido del usuario seran divididas en ${Math.round((sumB/quantitySmall)/userKg)}(kg) c/u`
-    }else{
-        return (`Excede el maximo soportado por el camion. ${sumA+sumB} de ${capacity}`);
-    }
+    return `Cajas Grandes: ${quantityBig} - ${sumA / quantityBig}(Kg) divididas equitativamente en ${Math.round(total/quantityBig)/userKg}(Kg) c/u `
 
 }                                           
 
 
-console.log(logistic(510, 110, 21));
+console.log(logistic(510, 210, 5));
